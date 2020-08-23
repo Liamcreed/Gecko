@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.14)
+project(ImGui)
+
+include_directories(include)
+include_directories(../GLFW/include)
+include_directories(../glad/include)
+add_library(   
+    ImGui 
+    "src/imgui.cpp"
+    "src/imgui_demo.cpp"
+    "src/imgui_draw.cpp"
+    "src/imgui_widgets.cpp"
+    "src/imgui_impl_glfw.cpp"
+    "src/imgui_impl_opengl3.cpp"
+)

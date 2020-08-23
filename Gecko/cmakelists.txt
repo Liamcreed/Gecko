@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.14)
+project(Gecko)
+
+include_directories(src)
+
+find_package(OpenGL REQUIRED)
+file(GLOB SOURCES "src/Gecko/*/*.cpp" )
+add_library(Gecko ${SOURCES})
+target_link_libraries(
+    Gecko 
+    ${OPENGL_LIBRARIES}
+    glfw glad 
+    ImGui 
+    assimp 
+    nfd
+    "-framework Cocoa"
+    "-framework IOKit"
+    "-framework CoreVideo"
+)
+target_precompile_headers(Gecko PUBLIC "src/Gecko/gkpch.h")
+    

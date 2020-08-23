@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.14)
+project(Gecko-Editor)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include_directories(Gecko/vendor/GLFW/include)
+link_directories(Gecko/vendor/GLFW/lib)
+
+include_directories(Gecko/vendor/NFD/include)
+link_directories(Gecko/vendor/NFD/lib)
+
+include_directories(Gecko/vendor/assimp/include)
+link_directories(Gecko/vendor/assimp/lib)
+
+include_directories(Gecko/vendor/glm/include)
+
+include_directories(Gecko/vendor/stb_image)
+include_directories(Gecko/vendor/entt/include)
+
+
+find_package(OpenGL REQUIRED)
+include_directories( ${OPENGL_INCLUDE_DIRS})
+if(APPLE)
+    add_definitions(-Wno-deprecated-declarations)
+endif()
+
+add_library(glad "Gecko/vendor/glad/src/glad.c")
+include_directories(Gecko/vendor/glad/include)
+
+include_directories(Gecko/vendor/ImGui/include)
+
+include_directories(Gecko/src/Gecko)
+include_directories(Gecko/src)
+
+add_subdirectory(Gecko/vendor/ImGui)
+add_subdirectory(Gecko)
+add_subdirectory(Gecko-Editor)
+
+
