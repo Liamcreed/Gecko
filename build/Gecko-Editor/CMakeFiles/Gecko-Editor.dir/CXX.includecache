@@ -2510,12 +2510,6 @@ intrin.h
 arm_neon.h
 -
 
-/Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/EditorApp.cpp
-Gecko.h
-/Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Gecko.h
-Layer.h
-/Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.h
-
 /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.cpp
 Layer.h
 /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.h
@@ -2587,6 +2581,4 @@ Gecko/Core/DeltaTime.h
 /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx
 /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/gkpch.h
 -
-
-/Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx
 

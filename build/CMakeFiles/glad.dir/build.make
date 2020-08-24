@@ -80,15 +80,15 @@ include CMakeFiles/glad.dir/flags.make
 CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.o: CMakeFiles/glad.dir/flags.make
 CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.o: ../Gecko/vendor/glad/src/glad.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.o   -c /Users/liamcreed/dev/Engines/Gecko/Gecko/vendor/glad/src/glad.c
+	/usr/local/bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.o   -c /Users/liamcreed/dev/Engines/Gecko/Gecko/vendor/glad/src/glad.c
 
 CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/liamcreed/dev/Engines/Gecko/Gecko/vendor/glad/src/glad.c > CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.i
+	/usr/local/bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/liamcreed/dev/Engines/Gecko/Gecko/vendor/glad/src/glad.c > CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.i
 
 CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/liamcreed/dev/Engines/Gecko/Gecko/vendor/glad/src/glad.c -o CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.s
+	/usr/local/bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/liamcreed/dev/Engines/Gecko/Gecko/vendor/glad/src/glad.c -o CMakeFiles/glad.dir/Gecko/vendor/glad/src/glad.c.s
 
 # Object files for target glad
 glad_OBJECTS = \

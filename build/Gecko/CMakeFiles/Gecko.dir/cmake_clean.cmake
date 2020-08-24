@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Gecko.dir/cmake_pch.hxx.pch"
+  "CMakeFiles/Gecko.dir/cmake_pch.hxx.gch"
   "CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o"
   "CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o"
   "CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o"

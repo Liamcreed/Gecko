@@ -11,7 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/liamcreed/dev/Engines/Gecko/Gecko/vendor/ImGui/src/imgui_impl_opengl3.cpp" "/Users/liamcreed/dev/Engines/Gecko/build/Gecko/vendor/ImGui/CMakeFiles/ImGui.dir/src/imgui_impl_opengl3.cpp.o"
   "/Users/liamcreed/dev/Engines/Gecko/Gecko/vendor/ImGui/src/imgui_widgets.cpp" "/Users/liamcreed/dev/Engines/Gecko/build/Gecko/vendor/ImGui/CMakeFiles/ImGui.dir/src/imgui_widgets.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

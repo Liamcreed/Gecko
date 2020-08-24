@@ -146,9 +146,9 @@ Gecko/fast:
 .PHONY : Gecko/fast
 
 # target to build an object file
-cmake_pch.hxx.pch:
-	cd /Users/liamcreed/dev/Engines/Gecko/build && $(MAKE) $(MAKESILENT) -f Gecko/CMakeFiles/Gecko.dir/build.make Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
-.PHONY : cmake_pch.hxx.pch
+cmake_pch.hxx.gch:
+	cd /Users/liamcreed/dev/Engines/Gecko/build && $(MAKE) $(MAKESILENT) -f Gecko/CMakeFiles/Gecko.dir/build.make Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
+.PHONY : cmake_pch.hxx.gch
 
 # target to preprocess a source file
 cmake_pch.hxx.i:
@@ -655,7 +655,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Gecko"
-	@echo "... cmake_pch.hxx.pch"
+	@echo "... cmake_pch.hxx.gch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"
 	@echo "... src/Gecko/Core/Application.o"

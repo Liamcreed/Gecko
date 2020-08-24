@@ -146,9 +146,9 @@ Gecko-Editor/fast:
 .PHONY : Gecko-Editor/fast
 
 # target to build an object file
-cmake_pch.hxx.pch:
-	cd /Users/liamcreed/dev/Engines/Gecko/build && $(MAKE) $(MAKESILENT) -f Gecko-Editor/CMakeFiles/Gecko-Editor.dir/build.make Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch
-.PHONY : cmake_pch.hxx.pch
+cmake_pch.hxx.gch:
+	cd /Users/liamcreed/dev/Engines/Gecko/build && $(MAKE) $(MAKESILENT) -f Gecko-Editor/CMakeFiles/Gecko-Editor.dir/build.make Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch
+.PHONY : cmake_pch.hxx.gch
 
 # target to preprocess a source file
 cmake_pch.hxx.i:
@@ -223,7 +223,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Gecko-Editor"
-	@echo "... cmake_pch.hxx.pch"
+	@echo "... cmake_pch.hxx.gch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"
 	@echo "... src/EditorApp.o"

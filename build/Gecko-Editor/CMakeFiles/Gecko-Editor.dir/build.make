@@ -77,49 +77,49 @@ include Gecko-Editor/CMakeFiles/Gecko-Editor.dir/progress.make
 # Include the compile flags for this target's objects.
 include Gecko-Editor/CMakeFiles/Gecko-Editor.dir/flags.make
 
-Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/flags.make
-Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx
-Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -emit-pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -o CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch -c /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx
+Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/flags.make
+Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx
+Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch"
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -o CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch -c /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx
 
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -emit-pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx > CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx > CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.i
 
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -emit-pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx -o CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.cxx -o CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.s
 
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/flags.make
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o: ../Gecko-Editor/src/EditorApp.cpp
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx
-Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch
+Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -o CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/EditorApp.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -o CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/EditorApp.cpp
 
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/EditorApp.cpp > CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/EditorApp.cpp > CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.i
 
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/EditorApp.cpp -o CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/EditorApp.cpp -o CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.s
 
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/flags.make
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o: ../Gecko-Editor/src/Layer.cpp
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx
-Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch
+Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -o CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -o CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.cpp
 
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.cpp > CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.cpp > CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.i
 
 Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.cpp -o CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko-Editor/src/Layer.cpp -o CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.s
 
 # Object files for target Gecko-Editor
 Gecko__Editor_OBJECTS = \
@@ -129,7 +129,7 @@ Gecko__Editor_OBJECTS = \
 # External object files for target Gecko-Editor
 Gecko__Editor_EXTERNAL_OBJECTS =
 
-Gecko-Editor/Gecko-Editor: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.pch
+Gecko-Editor/Gecko-Editor: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/cmake_pch.hxx.gch
 Gecko-Editor/Gecko-Editor: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/EditorApp.cpp.o
 Gecko-Editor/Gecko-Editor: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/src/Layer.cpp.o
 Gecko-Editor/Gecko-Editor: Gecko-Editor/CMakeFiles/Gecko-Editor.dir/build.make

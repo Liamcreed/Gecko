@@ -77,289 +77,289 @@ include Gecko/CMakeFiles/Gecko.dir/progress.make
 # Include the compile flags for this target's objects.
 include Gecko/CMakeFiles/Gecko.dir/flags.make
 
-Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch: Gecko/CMakeFiles/Gecko.dir/flags.make
-Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.cxx
-Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -emit-pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -c /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.cxx
+Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch: Gecko/CMakeFiles/Gecko.dir/flags.make
+Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.cxx
+Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch"
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/cmake_pch.hxx.gch -c /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.cxx
 
 Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/cmake_pch.hxx.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -emit-pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.cxx > CMakeFiles/Gecko.dir/cmake_pch.hxx.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.cxx > CMakeFiles/Gecko.dir/cmake_pch.hxx.i
 
 Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/cmake_pch.hxx.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -emit-pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.cxx -o CMakeFiles/Gecko.dir/cmake_pch.hxx.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.cxx -o CMakeFiles/Gecko.dir/cmake_pch.hxx.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o: ../Gecko/src/Gecko/Core/Application.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Application.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Application.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Application.cpp > CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Application.cpp > CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Application.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Application.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o: ../Gecko/src/Gecko/Core/Input.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Input.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Input.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Input.cpp > CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Input.cpp > CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Input.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Input.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o: ../Gecko/src/Gecko/Core/Layer.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Layer.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Layer.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Layer.cpp > CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Layer.cpp > CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Layer.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Layer.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.o: ../Gecko/src/Gecko/Core/Window.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Window.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Window.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Window.cpp > CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Window.cpp > CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Window.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Core/Window.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Core/Window.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.o: ../Gecko/src/Gecko/ImGui/ImGuiLayer.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/ImGui/ImGuiLayer.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/ImGui/ImGuiLayer.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/ImGui/ImGuiLayer.cpp > CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/ImGui/ImGuiLayer.cpp > CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/ImGui/ImGuiLayer.cpp -o CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/ImGui/ImGuiLayer.cpp -o CMakeFiles/Gecko.dir/src/Gecko/ImGui/ImGuiLayer.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.o: ../Gecko/src/Gecko/Renderer/FrameBuffer.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/FrameBuffer.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/FrameBuffer.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/FrameBuffer.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/FrameBuffer.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/FrameBuffer.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/FrameBuffer.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/FrameBuffer.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.o: ../Gecko/src/Gecko/Renderer/Material.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Material.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Material.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Material.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Material.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Material.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Material.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Material.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.o: ../Gecko/src/Gecko/Renderer/Mesh.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Mesh.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Mesh.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Mesh.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Mesh.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Mesh.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Mesh.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Mesh.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.o: ../Gecko/src/Gecko/Renderer/Model.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Model.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Model.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Model.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Model.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Model.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Model.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Model.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.o: ../Gecko/src/Gecko/Renderer/PerspectiveCamera.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCamera.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCamera.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCamera.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCamera.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCamera.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCamera.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCamera.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.o: ../Gecko/src/Gecko/Renderer/PerspectiveCameraController.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCameraController.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCameraController.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCameraController.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCameraController.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCameraController.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/PerspectiveCameraController.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/PerspectiveCameraController.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.o: ../Gecko/src/Gecko/Renderer/Renderer.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Renderer.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Renderer.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Renderer.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Renderer.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Renderer.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Renderer.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Renderer.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.o: ../Gecko/src/Gecko/Renderer/Shader.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Shader.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Shader.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Shader.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Shader.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Shader.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Shader.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Shader.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.o: ../Gecko/src/Gecko/Renderer/Skybox.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Skybox.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Skybox.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Skybox.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Skybox.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Skybox.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Skybox.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Skybox.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.o: ../Gecko/src/Gecko/Renderer/Texture.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Texture.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Texture.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Texture.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Texture.cpp > CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Texture.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Renderer/Texture.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Renderer/Texture.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.o: ../Gecko/src/Gecko/Scene/Entity.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Entity.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Entity.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Entity.cpp > CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Entity.cpp > CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Entity.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Entity.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Scene/Entity.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.o: ../Gecko/src/Gecko/Scene/Scene.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Scene.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Scene.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Scene.cpp > CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Scene.cpp > CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Scene.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/Scene.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Scene/Scene.cpp.s
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.o: Gecko/CMakeFiles/Gecko.dir/flags.make
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.o: ../Gecko/src/Gecko/Scene/SceneCamera.cpp
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx
-Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.o: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamcreed/dev/Engines/Gecko/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.o"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/SceneCamera.cpp
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -o CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.o -c /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/SceneCamera.cpp
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.i"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/SceneCamera.cpp > CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.i
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -E /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/SceneCamera.cpp > CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.i
 
 Gecko/CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.s"
-	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Xclang -include-pch -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/SceneCamera.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.s
+	cd /Users/liamcreed/dev/Engines/Gecko/build/Gecko && /usr/local/bin/g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /Users/liamcreed/dev/Engines/Gecko/build/Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx -S /Users/liamcreed/dev/Engines/Gecko/Gecko/src/Gecko/Scene/SceneCamera.cpp -o CMakeFiles/Gecko.dir/src/Gecko/Scene/SceneCamera.cpp.s
 
 # Object files for target Gecko
 Gecko_OBJECTS = \
@@ -385,7 +385,7 @@ Gecko_OBJECTS = \
 # External object files for target Gecko
 Gecko_EXTERNAL_OBJECTS =
 
-Gecko/libGecko.a: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.pch
+Gecko/libGecko.a: Gecko/CMakeFiles/Gecko.dir/cmake_pch.hxx.gch
 Gecko/libGecko.a: Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Application.cpp.o
 Gecko/libGecko.a: Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Input.cpp.o
 Gecko/libGecko.a: Gecko/CMakeFiles/Gecko.dir/src/Gecko/Core/Layer.cpp.o
