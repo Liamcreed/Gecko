@@ -3,11 +3,11 @@ out vec4 FragColor;
 
 struct Material
 {
-    sampler2D albedoTexture;
-    sampler2D roughnessTexture;
-    sampler2D AOTexture;
-    sampler2D normalTexture;
-    sampler2D metallicTexture;
+    sampler2D albedoMap;
+    sampler2D roughnessMap;
+    sampler2D AOMap;
+    sampler2D normalMap;
+    sampler2D metallicMap;
 
     vec3 albedo;
     float roughness;
@@ -23,6 +23,6 @@ uniform Material material;
 
 void main()
 {   
-    FragColor = texture(material.albedoTexture, TexCoords);
+    FragColor = texture(material.albedoMap, TexCoords);
 }
 

@@ -20,18 +20,13 @@ namespace Gecko
 
     class Mesh
     {
-    private:
         uint32_t vao, vbo, ibo;
-
     public:
         std::vector<Vertex> vertices;
-        std::vector<uint32_t> indices;
-        std::vector<Texture> textures;
-        
+        std::vector<uint32_t> indices;        
     public:
-        Mesh(std::vector<Vertex> vertices, std::vector<uint32_t> indices, std::vector<Texture> textures);
-        void Draw(Ref<Shader> &shader);
-
+        Mesh(std::vector<Vertex> vertices, std::vector<uint32_t> indices);
+        void Bind();
     private:
         void CreateMesh();
     };

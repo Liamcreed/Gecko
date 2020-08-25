@@ -15,7 +15,7 @@ namespace Gecko
 
         uint32_t m_TextureData;
     public:
-        Texture();
+        //Texture();
         std::string &GetPath() { return m_Path; }
         std::string &GetType() { return m_Type; }
         uint32_t GetTextureData(){return m_TextureData;}

@@ -33,9 +33,11 @@ public:
 
 void EditorLayer::OnAttach()
 {
-    
+    Ref<Model> model = CreateRef<Model>();
+    model->LoadFromFile("assets/models/Cavetroll/Cavetroll.fbx");
+
     m_PlayerEntity = m_ActiveScene->CreateEntity("Droid");
-    m_PlayerEntity.AddComponent<MeshRendererComponent>("assets/models/CaveTroll/CaveTroll.fbx");
+    m_PlayerEntity.AddComponent<MeshRendererComponent>(model->meshes[0],model->materials[0] );
     m_PlayerEntity.AddComponent<ScriptComponent>().Bind<PlayerMovement>();
 
     m_MainCameraEntity = m_ActiveScene->CreateEntity("Camera Entity");
@@ -55,7 +57,6 @@ void EditorLayer::OnUpdate(DeltaTime dt)
 
     Renderer::Clear();
     m_ActiveScene->OnUpdate(dt);
-
     m_Framebuffer.UnBind();
 }
 
@@ -154,33 +155,34 @@ void EditorLayer::OnImGuiRender()
             camera.SetPerspectiveFOV(fov);
     }
     ImGui::Separator();
-    
+
     if (m_PlayerEntity)
     {
         ImGui::Separator();
 
         auto &tag = m_PlayerEntity.GetComponent<TagComponent>().Tag;
         ImGui::Text("%s", tag.c_str());
-        auto &droidPath = m_PlayerEntity.GetComponent<MeshRendererComponent>().Path;
-        ImGui::TextWrapped(droidPath.c_str());
+
         if (ImGui::Button("..."))
         {
             nfdchar_t *outPath = NULL;
             nfdresult_t result = NFD_OpenDialog("obj,fbx", NULL, &outPath);
 
-            if ( result == NFD_OKAY )
-                m_PlayerEntity.GetComponent<MeshRendererComponent>().LoadFromFile((const char *)outPath);
+            if (result == NFD_OKAY)
+            {
+                std::cout<<"OKAY!\n"; //FIXME:
+            }
         }
         ImGui::DragFloat3("player Transform",
                           &m_PlayerEntity.GetComponent<TransformComponent>().Position.x, 0.01f);
         if (ImGui::TreeNode("Model textures"))
         {
-            for (int i = 0; i < m_PlayerEntity.GetComponent<MeshRendererComponent>().model->textures.size(); i++)
+            for (int i = 0; i < m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures().size(); i++)
             {
-                std::string name = m_PlayerEntity.GetComponent<MeshRendererComponent>().model->textures[i].GetType() + " " + m_PlayerEntity.GetComponent<MeshRendererComponent>().model->textures[i].GetPath();
+                std::string name = m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures()[i]->GetType() + " " + m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures()[i]->GetPath();
                 if (ImGui::TreeNode(name.c_str()))
                 {
-                    ImGui::Image((void *)m_PlayerEntity.GetComponent<MeshRendererComponent>().model->textures[i].GetTextureData(),
+                    ImGui::Image((void *)m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures()[i]->GetTextureData(),
                                  ImVec2(200, 200));
                     ImGui::TreePop();
                 }

@@ -3,28 +3,14 @@
 
 namespace Gecko
 {
-    Mesh::Mesh(std::vector<Vertex> vertices, std::vector<uint32_t> indices, std::vector<Texture> textures)
+    Mesh::Mesh(std::vector<Vertex> vertices, std::vector<uint32_t> indices)
     {
         this->vertices = vertices;
-        this->indices = indices;
-        this->textures = textures;
-        CreateMesh();
+        this->indices = indices;      
+        CreateMesh();  
     }
-    void Mesh::Draw(Ref<Shader> &shader)
+    void Mesh::Bind()
     {
-        for (uint32_t i = 0; i < textures.size(); i++)
-        {
-            std::string name = textures[i].GetType();
-            
-            shader->SetFloat(("material." + name).c_str(), i);
-        
-            textures[i].Bind(i);
-        }
-        glActiveTexture(GL_TEXTURE0);
-
-        shader->SetFloat("material.shininess",  32.0f);
-        
-        //Render mesh
         glBindVertexArray(vao);
         glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);

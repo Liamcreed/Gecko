@@ -17,7 +17,7 @@ namespace Gecko
     }
     void Renderer::Init()
     {
-        glfwSwapInterval(1);
+        Application::Get()->GetWindow()->Vsync(true);
 
         glEnable(GL_DEPTH_TEST);
         glDepthFunc(GL_LEQUAL);
@@ -63,8 +63,10 @@ namespace Gecko
         s_Data.shader = shader;
         s_Data.TransformMatrix = transform;
     }
-    void Renderer::DrawModel(Ref<Model> &model, const glm::vec3 &position, const glm::vec3 &scale, const glm::vec3 &rotation)
+    
+    void Renderer::DrawMesh(Ref<Mesh>& mesh,Ref<Material>& material,const glm::vec3 &position, const glm::vec3 &scale, const glm::vec3 &rotation )
     {
+        //Take in material
         glm::mat4 transform = glm::mat4(1.0f);
         transform = glm::translate(transform, position);
         transform = glm::scale(transform, scale);
@@ -74,104 +76,10 @@ namespace Gecko
 
         s_Data.shader->SetMat4("model", transform);
 
-        model->Draw(s_Data.shader);
+        material->Bind(s_Data.shader);
+        mesh->Bind();
     }
-    void DrawMesh(Ref<Mesh>& mesh,const glm::vec3 &position, const glm::vec3 &scale, const glm::vec3 &rotation )
-    {
-        glm::mat4 transform = glm::mat4(1.0f);
-        transform = glm::translate(transform, position);
-        transform = glm::scale(transform, scale);
-        transform = glm::rotate(transform, glm::radians(rotation.x), glm::vec3(1, 0, 0));
-        transform = glm::rotate(transform, glm::radians(rotation.y), glm::vec3(0, 1, 0));
-        transform = glm::rotate(transform, glm::radians(rotation.z), glm::vec3(0, 0, 1));
-
-        s_Data.shader->SetMat4("model", transform);
-        mesh->Draw(s_Data.shader);
-    }
-    void Renderer::DrawCube(Ref<Texture> &texture, const glm::vec3 &position, const glm::vec3 &scale, const glm::vec3 &rotation)
-    {
-        glm::mat4 transform = glm::mat4(1.0f);
-        transform = glm::translate(transform, position);
-        transform = glm::scale(transform, scale);
-        transform = glm::rotate(transform, glm::radians(rotation.x), glm::vec3(1, 0, 0));
-        transform = glm::rotate(transform, glm::radians(rotation.y), glm::vec3(0, 1, 0));
-        transform = glm::rotate(transform, glm::radians(rotation.z), glm::vec3(0, 0, 1));
-
-        texture->Bind();
-        s_Data.shader->SetMat4("model", transform);
-        //FIXME:
-        s_Data.shader->SetFloat("material.texture_diffuse", 0);
-
-        static uint32_t vao;
-        static uint32_t vbo;
-
-        if (vao == 0)
-        {
-            float vertices[] = {
-                // back face
-                -1.0f, -1.0f, -1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f, // bottom-left
-                1.0f, 1.0f, -1.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f,   // top-right
-                1.0f, -1.0f, -1.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f,  // bottom-right
-                1.0f, 1.0f, -1.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f,   // top-right
-                -1.0f, -1.0f, -1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f, // bottom-left
-                -1.0f, 1.0f, -1.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f,  // top-left
-                // front face
-                -1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // bottom-left
-                1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,  // bottom-right
-                1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,   // top-right
-                1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,   // top-right
-                -1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,  // top-left
-                -1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // bottom-left
-                // left face
-                -1.0f, 1.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f,   // top-right
-                -1.0f, 1.0f, -1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f,  // top-left
-                -1.0f, -1.0f, -1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f, // bottom-left
-                -1.0f, -1.0f, -1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f, // bottom-left
-                -1.0f, -1.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f,  // bottom-right
-                -1.0f, 1.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f,   // top-right
-                                                                    // right face
-                1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,     // top-left
-                1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,   // bottom-right
-                1.0f, 1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f,    // top-right
-                1.0f, -1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,   // bottom-right
-                1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,     // top-left
-                1.0f, -1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f,    // bottom-left
-                // bottom face
-                -1.0f, -1.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, // top-right
-                1.0f, -1.0f, -1.0f, 0.0f, -1.0f, 0.0f, 1.0f, 1.0f,  // top-left
-                1.0f, -1.0f, 1.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f,   // bottom-left
-                1.0f, -1.0f, 1.0f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f,   // bottom-left
-                -1.0f, -1.0f, 1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f,  // bottom-right
-                -1.0f, -1.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, // top-right
-                // top face
-                -1.0f, 1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, // top-left
-                1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,   // bottom-right
-                1.0f, 1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,  // top-right
-                1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,   // bottom-right
-                -1.0f, 1.0f, -1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, // top-left
-                -1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f   // bottom-left
-            };
-            glGenVertexArrays(1, &vao);
-            glGenBuffers(1, &vbo);
-            // fill buffer
-            glBindBuffer(GL_ARRAY_BUFFER, vbo);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-            // link vertex attributes
-            glBindVertexArray(vao);
-            glEnableVertexAttribArray(0);
-            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void *)0);
-            glEnableVertexAttribArray(1);
-            glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void *)(3 * sizeof(float)));
-            glEnableVertexAttribArray(2);
-            glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void *)(6 * sizeof(float)));
-            glBindBuffer(GL_ARRAY_BUFFER, 0);
-            glBindVertexArray(0);
-        }
-        // render Cube
-        glBindVertexArray(vao);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-    }
+    
 
     Renderer::~Renderer()
     {

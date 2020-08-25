@@ -1,0 +1,17 @@
+struct model
+{
+    std::vector<Material>;
+    std::vector<Meshes>;
+}
+
+model loader class
+{
+    all static:
+    Constructor(Path) { reload mesh;}
+    model LoadFromFile(Path);
+    mesh LoadCube();
+    mesh LoadSphere();
+}
+auto model = ModelLoader::LoadModel("Path")
+
+Renderer::DrawMesh(model.mesh[0], model.Materia[0], and position and stuff) instead of model

@@ -2,44 +2,44 @@
 #include "Material.h"
 namespace Gecko
 {
-    Material::Material(Ref<Shader> shader)
-        : m_Shader(shader)
-    {
-    }
-
     Material::~Material()
     {
     }
-    void Material::Bind()
+    void Material::Bind(Ref<Shader>& shader)
     {
-        m_Shader->SetFloat(("material." + m_AlbedoTexture->GetType()).c_str(), 0);
-        m_AlbedoTexture->Bind();
-        m_Shader->SetFloat(("material." + m_MetallicTexture->GetType()).c_str(), 0);
-        m_MetallicTexture->Bind();
-        m_Shader->SetFloat(("material." + m_RoughnessTexture->GetType()).c_str(), 0);
-        m_RoughnessTexture->Bind();
-        m_Shader->SetFloat(("material." + m_AOTexture->GetType()).c_str(), 0);
-        m_AOTexture->Bind();
-        m_Shader->SetFloat(("material." + m_NormalTexture->GetType()).c_str(), 0);
-        m_NormalTexture->Bind();
+        AlbedoTexture->Bind(0);
+        shader->SetFloat("material.albedoMap", 0);
+    
+        MetallicTexture->Bind(1);
+        shader->SetFloat("material.metallicMap", 1);
+        
+        RoughnessTexture->Bind(2);
+        shader->SetFloat("material.roughnessMap", 2);
 
-        m_Shader->SetFloat("albedo", m_Albedo);
-        m_Shader->SetFloat("roughness", m_Roughness);
-        m_Shader->SetFloat("AO", m_AO);
-        m_Shader->SetFloat("metallic", m_Metallic);
+        AOTexture->Bind(3);
+        shader->SetFloat("material.AOMap", 3);
+        
+        NormalTexture->Bind(4);
+        shader->SetFloat("material.normalMap", 4);
+        
+
+        shader->SetFloat("albedo", m_Albedo);
+        shader->SetFloat("roughness", m_Roughness);
+        shader->SetFloat("AO", m_AO);
+        shader->SetFloat("metallic", m_Metallic);
     }
-    void Material::SetTexture(std::string &name, Ref<Texture> texture)
+    void Material::SetTexture(std::string name, Ref<Texture> texture)
     {
         if (name == "albedo")
-            m_AlbedoTexture = texture;
+            AlbedoTexture = texture;
         if (name == "roughness")
-            m_RoughnessTexture = texture;
+            RoughnessTexture = texture;
         if (name == "metallic")
-            m_MetallicTexture = texture;
+            MetallicTexture = texture;
         if (name == "ao" || name == "AO")
-            m_NormalTexture = texture;
+            AOTexture = texture;
         if (name == "normal")
-            m_NormalTexture = texture;
+            NormalTexture = texture;
     }
     void Material::SetValue(std::string &name, float value)
     {

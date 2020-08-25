@@ -8,10 +8,6 @@
 #include "Application.h"
 #include "KeyCodes.h"
 
-#include "Gecko/Renderer/Shader.h"
-#include "Gecko/Renderer/Texture.h"
-#include "Gecko/Renderer/PerspectiveCamera.h"
-#include "Gecko/Renderer/Model.h"
 
 namespace Gecko
 {

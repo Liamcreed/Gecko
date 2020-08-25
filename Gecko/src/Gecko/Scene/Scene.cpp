@@ -10,6 +10,7 @@
 
 namespace Gecko
 {
+    
     Scene::Scene()
     {
         shader = CreateRef<Shader>("assets/shaders/default.vert.shader", "assets/shaders/default.frag.shader");
@@ -22,6 +23,7 @@ namespace Gecko
         entity.AddComponent<TagComponent>(name);
         return entity;
     }
+    
 
     void Scene::OnUpdate(DeltaTime dt)
     {
@@ -74,9 +76,8 @@ namespace Gecko
                 auto group = m_Registry.group<TransformComponent>(entt::get<MeshRendererComponent>);
                 for (auto entity : group)
                 {
-                    auto [transform, mesh] = group.get<TransformComponent, MeshRendererComponent>(entity);
-
-                    Renderer::DrawModel(mesh.model, transform.Position, transform.Size, transform.Rotation);
+                    auto [transform, meshRenderer] = group.get<TransformComponent, MeshRendererComponent>(entity); 
+                    Renderer::DrawMesh(meshRenderer.mesh, meshRenderer.material, transform.Position, transform.Size, transform.Rotation);
                 }
             }
             Renderer::EndScene();

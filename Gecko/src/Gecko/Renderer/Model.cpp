@@ -6,21 +6,22 @@ namespace Gecko
 {
     void Model::LoadFromFile(std::string path)
     {
+        //Clear meshes before loading new model
         meshes.clear();
-        textures.clear();
+        materials.clear();
 
         Assimp::Importer importer;
         const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenSmoothNormals | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
 
         if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
         {
-            GK_LOG(BOLDRED "[ASSIMP ERROR]" RESET) << importer.GetErrorString() << std::endl;
+            GK_LOG(BOLDRED "[MODEL LOADING ERROR]" RESET) << importer.GetErrorString() << std::endl;
             return;
         }
 
-        this->directory = path.substr(0, path.find_last_of('/'));
+        directory = path.substr(0, path.find_last_of('/'));
 
-        this->ProcessNode(scene->mRootNode, scene);
+        ProcessNode(scene->mRootNode, scene);
     }
     void Model::ProcessNode(aiNode *node, const aiScene *scene)
     {
@@ -28,25 +29,47 @@ namespace Gecko
         {
             aiMesh *mesh = scene->mMeshes[node->mMeshes[i]];
 
-            this->meshes.push_back(this->ProcessMesh(mesh, scene));
+            meshes.push_back(ProcessMesh(mesh, scene));
+            materials.push_back(ProcessMaterial(mesh, scene));
         }
 
         for (uint32_t i = 0; i < node->mNumChildren; i++)
         {
-            this->ProcessNode(node->mChildren[i], scene);
+            ProcessNode(node->mChildren[i], scene);
         }
     }
-    Mesh Model::ProcessMesh(aiMesh *mesh, const aiScene *scene)
+    Ref<Material> Model::ProcessMaterial(aiMesh *mesh, const aiScene *scene)
+    {
+        Ref<Material> mat = CreateRef<Material>();
+        if (mesh->mMaterialIndex >= 0)
+        {
+            aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
+            Ref<Texture> albedoMap = LoadMaterialTexture(material, aiTextureType_DIFFUSE, mat);
+            mat->SetTexture("albedo", albedoMap);
+
+            Ref<Texture> metallicMap = LoadMaterialTexture(material, aiTextureType_SPECULAR, mat);
+            mat->SetTexture("metallic", metallicMap);
+
+            Ref<Texture> roughnessMap = LoadMaterialTexture(material, aiTextureType_SHININESS, mat);
+            mat->SetTexture("roughness", roughnessMap);
+
+            Ref<Texture> normalMap = LoadMaterialTexture(material, aiTextureType_HEIGHT, mat);
+            mat->SetTexture("normal", normalMap);
+
+            Ref<Texture> AOMap = LoadMaterialTexture(material, aiTextureType_AMBIENT, mat);
+            mat->SetTexture("AO", AOMap);
+        }
+        return mat;
+    }
+    Ref<Mesh> Model::ProcessMesh(aiMesh *mesh, const aiScene *scene)
     {
         std::vector<Vertex> vertices;
         std::vector<uint32_t> indices;
-        std::vector<Texture> textures;
 
         for (uint32_t i = 0; i < mesh->mNumVertices; i++)
         {
             Vertex vertex;
             glm::vec3 vector;
-            
 
             vector.x = mesh->mVertices[i].x;
             vector.y = mesh->mVertices[i].y;
@@ -67,9 +90,7 @@ namespace Gecko
 
                 vertex.texCoord = vec;
 
-                //Segmentation  fault
-                
-                 vector.x = mesh->mTangents[i].x;
+                vector.x = mesh->mTangents[i].x;
                 vector.y = mesh->mTangents[i].y;
                 vector.z = mesh->mTangents[i].z;
                 vertex.Tangent = vector;
@@ -77,7 +98,7 @@ namespace Gecko
                 vector.x = mesh->mBitangents[i].x;
                 vector.y = mesh->mBitangents[i].y;
                 vector.z = mesh->mBitangents[i].z;
-                vertex.Bitangent = vector; 
+                vertex.Bitangent = vector;
             }
             else
             {
@@ -95,71 +116,34 @@ namespace Gecko
                 indices.push_back(face.mIndices[j]);
             }
         }
-        if (mesh->mMaterialIndex >= 0)
-        {
-            aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
+        Ref<Mesh> aMesh = CreateRef<Mesh>(vertices, indices);
 
-            std::vector<Texture> albedoMaps = this->LoadMaterialTextures(material, aiTextureType_DIFFUSE, "albedoTexture");
-            textures.insert(textures.end(), albedoMaps.begin(), albedoMaps.end());
-
-            std::vector<Texture> specularMaps = this->LoadMaterialTextures(material, aiTextureType_SPECULAR, "specularTexture");
-            textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
-
-            std::vector<Texture> metallicMaps = this->LoadMaterialTextures(material, aiTextureType_SPECULAR, "metallicTexture");
-            textures.insert(textures.end(), metallicMaps.begin(), metallicMaps.end());
-
-            std::vector<Texture> roughnessMaps = this->LoadMaterialTextures(material, aiTextureType_SHININESS, "roughnessTexture");
-            textures.insert(textures.end(), roughnessMaps.begin(), roughnessMaps.end());
-
-            std::vector<Texture> normalMaps = this->LoadMaterialTextures(material, aiTextureType_HEIGHT, "normalTexture");
-            textures.insert(textures.end(), normalMaps.begin(), normalMaps.end());
-
-            std::vector<Texture> AOMaps = this->LoadMaterialTextures(material, aiTextureType_AMBIENT, "AOTexture");
-            textures.insert(textures.end(), AOMaps.begin(), AOMaps.end());
-        }
-
-        return Mesh(vertices, indices, textures);
+        return aMesh;
     }
-    std::vector<Texture> Model::LoadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName)
+    Ref<Texture> Model::LoadMaterialTexture(aiMaterial *mat, aiTextureType type, Ref<Material> &material)
     {
-        std::vector<Texture> textures;
+        aiString str;
+        mat->GetTexture(type, 0, &str);
+        Ref<Texture> texture = CreateRef<Texture>();
 
-        for (uint32_t i = 0; i < mat->GetTextureCount(type); i++)
+        bool skip = false;
+        for (uint32_t j = 0; j < material->GetTextures().size(); j++)
         {
-            aiString str;
-            mat->GetTexture(type, i, &str);
-            bool skip = false;
-
-            for (uint32_t j = 0; j < this->textures.size(); j++)
+            if (material->GetTextures()[j])
             {
-                if (this->textures[j].GetPath() == str.C_Str())
+                if (material->GetTextures()[j]->GetPath() == str.C_Str())
                 {
-                    textures.push_back(this->textures[j]);
-                    skip = true;
-
-                    break;
+                    return material->GetTextures()[j];
                 }
             }
-            if (!skip)
-            {
-                Texture texture;
-                std::string filePath = this->directory + '/' + str.C_Str();
-                texture.LoadFromFile(filePath);
-                texture.GetType() = typeName;
-                std::cout << typeName << "\n";
-                texture.GetPath() = str.C_Str();
-                textures.push_back(texture);
-                
-                this->textures.push_back(texture);
-            }
         }
-        return textures;
-    }
-    void Model::Draw(Ref<Shader> &shader)
-    {
-        for (uint32_t i = 0; i < meshes.size(); i++)
+        if (!skip)
         {
-            meshes[i].Draw(shader);
+            std::string filePath = directory + '/' + str.C_Str();
+            texture->LoadFromFile(filePath);
+            texture->GetPath() = str.C_Str();
         }
+
+        return texture;
     }
 } // namespace Gecko

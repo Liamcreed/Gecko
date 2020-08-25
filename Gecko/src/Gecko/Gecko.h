@@ -21,7 +21,6 @@
 #include "Gecko/Renderer/PerspectiveCameraController.h"
 #include "Gecko/Renderer/Model.h"
 #include "Gecko/Renderer/FrameBuffer.h"
-#include "Gecko/Renderer/Skybox.h"
 #include "Gecko/Renderer/Renderer.h"
 
 #include "Gecko/Scene/Scene.h"
