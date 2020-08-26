@@ -1,6 +1,9 @@
+#include "gkpch.h"
 #include "Layer.h"
 #include <nfd.h>
+#include "Panels/SceneHierarchyPanel.h"
 
+//------------Scripts-------------//
 class PlayerMovement : public EntityBehaviour
 {
 public:
@@ -30,14 +33,17 @@ public:
         transform[3][2] -= Input::GetAxis("Vertical") * speed * dt;
     }
 };
+//--------------------------------//
+
+Ref<Model> caveTrollModel; //FIXME:
 
 void EditorLayer::OnAttach()
 {
-    Ref<Model> model = CreateRef<Model>();
-    model->LoadFromFile("assets/models/Cavetroll/Cavetroll.fbx");
+    caveTrollModel = CreateRef<Model>();
+    caveTrollModel->LoadFromFile("assets/models/Cavetroll/Cavetroll.fbx");
 
     m_PlayerEntity = m_ActiveScene->CreateEntity("Droid");
-    m_PlayerEntity.AddComponent<MeshRendererComponent>(model->meshes[0],model->materials[0] );
+    m_PlayerEntity.AddComponent<MeshRendererComponent>(caveTrollModel->meshes[0],caveTrollModel->materials[0] );
     m_PlayerEntity.AddComponent<ScriptComponent>().Bind<PlayerMovement>();
 
     m_MainCameraEntity = m_ActiveScene->CreateEntity("Camera Entity");
@@ -47,6 +53,8 @@ void EditorLayer::OnAttach()
     m_SecondCameraEntity = m_ActiveScene->CreateEntity("Second Camera Entity");
     auto &cc = m_SecondCameraEntity.AddComponent<CameraComponent>();
     cc.Primary = false;
+
+    m_SceneHierarchyPanel.SetContext(m_ActiveScene);
 
     Renderer::Init();
 }
@@ -124,12 +132,9 @@ void EditorLayer::OnImGuiRender()
                      0, 500, {250, 30});
     ImGui::Separator();
     ImGui::End();
-    //------------------//
+    //-------------------//
 
-    //------------------//
-    ImGui::Begin("Scene Hierarchy");
-    ImGui::End();
-    //------------------//
+    m_SceneHierarchyPanel.OnImGuiRenderer();
 
     ImGui::ShowDemoWindow();
 
@@ -156,6 +161,7 @@ void EditorLayer::OnImGuiRender()
     }
     ImGui::Separator();
 
+    //---------------------------//
     if (m_PlayerEntity)
     {
         ImGui::Separator();
@@ -170,7 +176,9 @@ void EditorLayer::OnImGuiRender()
 
             if (result == NFD_OKAY)
             {
-                std::cout<<"OKAY!\n"; //FIXME:
+                caveTrollModel->LoadFromFile(outPath);
+                m_PlayerEntity.GetComponent<MeshRendererComponent>().material = caveTrollModel->materials[0];
+                m_PlayerEntity.GetComponent<MeshRendererComponent>().mesh = caveTrollModel->meshes[0];
             }
         }
         ImGui::DragFloat3("player Transform",

@@ -24,6 +24,7 @@ namespace Gecko
 
         m_Running = true;
     }
+    
     bool Application::Init()
     {
         return true;

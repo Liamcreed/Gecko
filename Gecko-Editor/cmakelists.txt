@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.14)
 project(Gecko-EditorProj)
 
+include_directories(Gecko-Editor/src)
+
 file(COPY assets DESTINATION ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME})
-file(GLOB SOURCES "src/*.cpp" )
+file(GLOB SOURCES "src/*.cpp" "src/Panels/*.cpp")
 
 add_executable(Gecko-Editor  ${SOURCES})
 target_link_libraries(Gecko-Editor Gecko)

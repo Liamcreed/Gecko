@@ -17,12 +17,9 @@ namespace Gecko
         ImGuiLayer *m_ImGuiLayer;   
 
         float m_LastFrameTime = 0;
-
         bool m_Running = false;
-
     private:
         bool Init();
-
     public:
         Application(const std::string &title = "Application");
         virtual ~Application();
@@ -43,7 +40,6 @@ namespace Gecko
 
         void Run();
         void Close();
-
     public:
         Window *GetWindow() { return m_Window; }
     };

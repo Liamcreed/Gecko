@@ -50,6 +50,16 @@ namespace Gecko
             return;
         }
         operator bool() const { return m_Entityhandle != entt::null; }
+        operator u_int32_t() const {return (uint32_t)m_Entityhandle;}
+
+        bool operator==(const Entity& other) const
+        {
+            return m_Entityhandle == other.m_Entityhandle && m_Scene == other.m_Scene;
+        }
+        bool operator!=(const Entity& other) const
+        {
+            return !(*this == other);
+        }
     };
 
 } // namespace Gecko

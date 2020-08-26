@@ -13,6 +13,7 @@ namespace Gecko
         float m_Roughness;
         float m_AO;
     public:
+        //FIXME:  std::vector<Ref<Texture>> instead of this 
         Ref<Texture> AlbedoTexture;
         Ref<Texture> MetallicTexture;
         Ref<Texture> RoughnessTexture;

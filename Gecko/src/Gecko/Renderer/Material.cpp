@@ -22,7 +22,6 @@ namespace Gecko
         NormalTexture->Bind(4);
         shader->SetFloat("material.normalMap", 4);
         
-
         shader->SetFloat("albedo", m_Albedo);
         shader->SetFloat("roughness", m_Roughness);
         shader->SetFloat("AO", m_AO);

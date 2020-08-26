@@ -1,5 +1,6 @@
 #pragma once
 #include "Gecko.h"
+#include "Panels/SceneHierarchyPanel.h"
 
 class EditorLayer : public Gecko::Layer
 {
@@ -14,6 +15,9 @@ private:
 
     bool m_PrimaryCamera  = true;
     bool m_ViewFocused;
+
+    //Panels
+    SceneHierarchyPanel m_SceneHierarchyPanel;
 public:
     EditorLayer(){}
     void OnAttach() override;

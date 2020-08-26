@@ -29,6 +29,9 @@ include_directories(Gecko/src)
 
 add_subdirectory(Gecko/vendor/ImGui)
 add_subdirectory(Gecko)
+
+include_directories(Gecko-Editor/src)
 add_subdirectory(Gecko-Editor)
+
 
 

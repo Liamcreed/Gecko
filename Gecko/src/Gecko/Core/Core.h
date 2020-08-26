@@ -29,6 +29,7 @@
 #define BOLDWHITE "\033[1m\033[37m"   /* Bold White */
 
 #define GK_ERROR "\033[1;31m[ERROR]\033[0m " 
+#define GK_OPENGL_ERROR "\033[1;31m[OPENGL ERROR]\033[0m " 
 #define GK_INFO "\x1B[1;34m[INFO]\033[0m "
 #define GK_WARNING "\x1B[1;33m[WARNING]\033[0m " 
 #define GK_LOG(type) std::cerr<<type
@@ -42,6 +43,3 @@ constexpr Ref<T> CreateRef(Args &&... args)
 {
     return std::make_shared<T>(std::forward<Args>(args)...);
 }
-
-
-
