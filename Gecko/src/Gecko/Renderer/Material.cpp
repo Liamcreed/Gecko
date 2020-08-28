@@ -5,40 +5,18 @@ namespace Gecko
     Material::~Material()
     {
     }
-    void Material::Bind(Ref<Shader>& shader)
+    void Material::Bind(Ref<Shader> &shader)
     {
-        AlbedoTexture->Bind(0);
-        shader->SetFloat("material.albedoMap", 0);
-    
-        MetallicTexture->Bind(1);
-        shader->SetFloat("material.metallicMap", 1);
-        
-        RoughnessTexture->Bind(2);
-        shader->SetFloat("material.roughnessMap", 2);
-
-        AOTexture->Bind(3);
-        shader->SetFloat("material.AOMap", 3);
-        
-        NormalTexture->Bind(4);
-        shader->SetFloat("material.normalMap", 4);
-        
-        shader->SetFloat("albedo", m_Albedo);
-        shader->SetFloat("roughness", m_Roughness);
-        shader->SetFloat("AO", m_AO);
-        shader->SetFloat("metallic", m_Metallic);
+        for (int i = 0; i < m_Textures.size(); i++)
+        {
+            glActiveTexture(GL_TEXTURE0 + i);
+            shader->SetInt("material." + m_Textures[i]->GetType(), i);
+            glBindTexture(GL_TEXTURE_2D, m_Textures[i]->GetRendererID());
+        }
     }
-    void Material::SetTexture(std::string name, Ref<Texture> texture)
+    void Material::SetTextures(std::vector<Ref<Texture>> textures)
     {
-        if (name == "albedo")
-            AlbedoTexture = texture;
-        if (name == "roughness")
-            RoughnessTexture = texture;
-        if (name == "metallic")
-            MetallicTexture = texture;
-        if (name == "ao" || name == "AO")
-            AOTexture = texture;
-        if (name == "normal")
-            NormalTexture = texture;
+        m_Textures = textures;
     }
     void Material::SetValue(std::string &name, float value)
     {

@@ -4,7 +4,6 @@
 
 #include "Gecko/Core/Application.h"
 
-
 namespace Gecko
 {
 	
@@ -22,10 +21,10 @@ namespace Gecko
 		ImGuiStyle &style = ImGui::GetStyle();
 		style.ScaleAllSizes(1.1);
 
-		//ApplyBlueTheme();
+		ApplyBlueTheme();
 		//ApplyDarkTheme();
 		
-		ApplyDefaultStyle();
+		//ApplyDefaultStyle();
 
 		if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 		{

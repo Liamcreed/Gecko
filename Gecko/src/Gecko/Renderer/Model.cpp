@@ -41,24 +41,28 @@ namespace Gecko
     Ref<Material> Model::ProcessMaterial(aiMesh *mesh, const aiScene *scene)
     {
         Ref<Material> mat = CreateRef<Material>();
+        std::vector<Ref<Texture>> textures;
         if (mesh->mMaterialIndex >= 0)
         {
             aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
-            Ref<Texture> albedoMap = LoadMaterialTexture(material, aiTextureType_DIFFUSE, mat);
-            mat->SetTexture("albedo", albedoMap);
+            std::vector<Ref<Texture>> albedoMap = LoadMaterialTexture(material, aiTextureType_DIFFUSE, "albedoMap", mat);
+            textures.insert(textures.end(),albedoMap.begin(), albedoMap.end());
 
-            Ref<Texture> metallicMap = LoadMaterialTexture(material, aiTextureType_SPECULAR, mat);
-            mat->SetTexture("metallic", metallicMap);
+            std::vector<Ref<Texture>> metallicMap = LoadMaterialTexture(material, aiTextureType_SPECULAR, "metallicMap", mat);
+            textures.insert(textures.end(),metallicMap.begin(), metallicMap.end());
 
-            Ref<Texture> roughnessMap = LoadMaterialTexture(material, aiTextureType_SHININESS, mat);
-            mat->SetTexture("roughness", roughnessMap);
+            std::vector<Ref<Texture>> roughnessMap = LoadMaterialTexture(material, aiTextureType_SHININESS, "roughnessMap", mat);
+            textures.insert(textures.end(),roughnessMap.begin(), roughnessMap.end());
 
-            Ref<Texture> normalMap = LoadMaterialTexture(material, aiTextureType_HEIGHT, mat);
-            mat->SetTexture("normal", normalMap);
+            std::vector<Ref<Texture>> normalMap = LoadMaterialTexture(material, aiTextureType_HEIGHT, "normalMap", mat);
+            textures.insert(textures.end(),normalMap.begin(), normalMap.end());
 
-            Ref<Texture> AOMap = LoadMaterialTexture(material, aiTextureType_AMBIENT, mat);
-            mat->SetTexture("AO", AOMap);
+            std::vector<Ref<Texture>> AOMap = LoadMaterialTexture(material, aiTextureType_AMBIENT, "AOMap", mat);
+            textures.insert(textures.end(),AOMap.begin(), AOMap.end());
+
+            mat->SetTextures(textures);
         }
+
         return mat;
     }
     Ref<Mesh> Model::ProcessMesh(aiMesh *mesh, const aiScene *scene)
@@ -120,30 +124,36 @@ namespace Gecko
 
         return aMesh;
     }
-    Ref<Texture> Model::LoadMaterialTexture(aiMaterial *mat, aiTextureType type, Ref<Material> &material)
+    std::vector<Ref<Texture>> Model::LoadMaterialTexture(aiMaterial *mat, aiTextureType type, std::string typeName, Ref<Material> &material)
     {
-        aiString str;
-        mat->GetTexture(type, 0, &str);
-        Ref<Texture> texture = CreateRef<Texture>();
-
         bool skip = false;
-        for (uint32_t j = 0; j < material->GetTextures().size(); j++)
+        std::vector<Ref<Texture>> textures;
+        
+
+        for (unsigned int i = 0; i < mat->GetTextureCount(type); i++)
         {
-            if (material->GetTextures()[j])
+            aiString str;
+            mat->GetTexture(type, i, &str);
+
+            for (uint32_t j = 0; j < material->GetTextures().size(); j++)
             {
                 if (material->GetTextures()[j]->GetPath() == str.C_Str())
                 {
-                    return material->GetTextures()[j];
+                    textures.push_back(material->GetTextures()[j]);
                 }
             }
-        }
-        if (!skip)
-        {
-            std::string filePath = directory + '/' + str.C_Str();
-            texture->LoadFromFile(filePath);
-            texture->GetPath() = str.C_Str();
-        }
+            if (!skip)
+            {
+                Ref<Texture> texture = CreateRef<Texture>();
+                std::string filePath = directory + '/' + str.C_Str();
+                texture->LoadFromFile(filePath);
 
-        return texture;
+                texture->GetType() = typeName;
+                texture->GetPath() = str.C_Str();
+
+                textures.push_back(texture);
+            }
+        }
+        return textures;
     }
 } // namespace Gecko

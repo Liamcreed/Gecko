@@ -42,7 +42,7 @@ void EditorLayer::OnAttach()
     caveTrollModel = CreateRef<Model>();
     caveTrollModel->LoadFromFile("assets/models/Cavetroll/Cavetroll.fbx");
 
-    m_PlayerEntity = m_ActiveScene->CreateEntity("Droid");
+    m_PlayerEntity = m_ActiveScene->CreateEntity("Player");
     m_PlayerEntity.AddComponent<MeshRendererComponent>(caveTrollModel->meshes[0],caveTrollModel->materials[0] );
     m_PlayerEntity.AddComponent<ScriptComponent>().Bind<PlayerMovement>();
 
@@ -172,7 +172,7 @@ void EditorLayer::OnImGuiRender()
         if (ImGui::Button("..."))
         {
             nfdchar_t *outPath = NULL;
-            nfdresult_t result = NFD_OpenDialog("obj,fbx", NULL, &outPath);
+            nfdresult_t result = NFD_OpenDialog("fbx", NULL, &outPath);
 
             if (result == NFD_OKAY)
             {

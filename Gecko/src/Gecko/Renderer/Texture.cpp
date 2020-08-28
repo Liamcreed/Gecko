@@ -5,7 +5,7 @@
 
 namespace Gecko
 {
-    /* Texture::Texture()
+    Texture::Texture()
     {
         glGenTextures(1, &m_RendererID);
 
@@ -22,7 +22,7 @@ namespace Gecko
 
         m_Height = 1;
         m_Width = 1;
-    } */
+    }  
     void Texture::Bind(uint32_t slot)
     {
         glActiveTexture(GL_TEXTURE0 + slot);
@@ -65,7 +65,7 @@ namespace Gecko
         }
         else
         {
-            GK_LOG(GK_ERROR) << "Failed to load: " << BLUE << m_Path << RESET << " File does not exist!" << std::endl;
+            GK_LOG(GK_ERROR) << "Failed to load: " << BLUE << m_Path << RESET << " File does not exist!" << std::endl; 
         }
 
         glBindTexture(GL_TEXTURE_2D, 0);

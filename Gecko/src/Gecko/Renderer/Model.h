@@ -19,6 +19,6 @@ namespace Gecko
         void ProcessNode(aiNode *node, const aiScene *scene);
         Ref<Mesh> ProcessMesh(aiMesh *mesh, const aiScene *scene);
         Ref<Material> ProcessMaterial(aiMesh *mesh, const aiScene *scene);
-        Ref<Texture> LoadMaterialTexture(aiMaterial *mat, aiTextureType type, Ref<Material>& material);
+        std::vector<Ref<Texture>> LoadMaterialTexture(aiMaterial *mat, aiTextureType type, std::string typeName,Ref<Material> &material);
     };
 } // namespace Gecko

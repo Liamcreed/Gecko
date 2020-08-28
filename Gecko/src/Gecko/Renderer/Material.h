@@ -12,24 +12,15 @@ namespace Gecko
         float m_Metallic;
         float m_Roughness;
         float m_AO;
+        std::vector<Ref<Texture>> m_Textures;
     public:
         //FIXME:  std::vector<Ref<Texture>> instead of this 
-        Ref<Texture> AlbedoTexture;
-        Ref<Texture> MetallicTexture;
-        Ref<Texture> RoughnessTexture;
-        Ref<Texture> NormalTexture;
-        Ref<Texture> AOTexture;
-
-        std::vector<Ref<Texture>> GetTextures(){return std::vector<Ref<Texture>>
-        {
-            AlbedoTexture,MetallicTexture,RoughnessTexture,
-            NormalTexture, AOTexture
-        };}
+        std::vector<Ref<Texture>> &GetTextures(){return m_Textures; }
         
         ~Material();
 
         void Bind(Ref<Shader>& shader);
-        void SetTexture(std::string name,Ref<Texture> texture);
+        void SetTextures(std::vector<Ref<Texture>> textures);
         void SetValue(std::string& name, float value);
         void SetShader(Ref<Shader> shader){m_Shader = shader; }
     };    
