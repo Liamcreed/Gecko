@@ -1,3 +1,3 @@
-cd ../build/Gecko-Editor
+cd ../build/gecko-editor
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make 

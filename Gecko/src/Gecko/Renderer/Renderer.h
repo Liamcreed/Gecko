@@ -14,6 +14,7 @@ namespace Gecko
     public:
         Renderer();
         ~Renderer();
+
         static void Clear(glm::vec4 color = glm::vec4(0.1f, 0.1f, 0.1f, 1.0f));
         static void Init();
 
@@ -22,11 +23,8 @@ namespace Gecko
         static void EndScene();
 
         static void Submit(const Ref<Shader> &shader, const glm::mat4 transform = glm::mat4(1.0f));
-
         //TODO: optimize renderer
         
-
-        //FIXME:
         static void DrawMesh(Ref<Mesh>& mesh,Ref<Material>& material, const glm::vec3 &position, const glm::vec3 &scale, const glm::vec3 &rotation );
     };
 

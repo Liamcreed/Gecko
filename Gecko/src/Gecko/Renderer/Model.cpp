@@ -8,6 +8,8 @@ namespace Gecko
     {
         //Clear meshes before loading new model
         meshes.clear();
+        meshes.clear();
+
         materials.clear();
 
         Assimp::Importer importer;
@@ -42,26 +44,26 @@ namespace Gecko
     {
         Ref<Material> mat = CreateRef<Material>();
         std::vector<Ref<Texture>> textures;
-        if (mesh->mMaterialIndex >= 0)
-        {
-            aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
-            std::vector<Ref<Texture>> albedoMap = LoadMaterialTexture(material, aiTextureType_DIFFUSE, "albedoMap", mat);
-            textures.insert(textures.end(),albedoMap.begin(), albedoMap.end());
 
-            std::vector<Ref<Texture>> metallicMap = LoadMaterialTexture(material, aiTextureType_SPECULAR, "metallicMap", mat);
-            textures.insert(textures.end(),metallicMap.begin(), metallicMap.end());
+        aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
+        std::vector<Ref<Texture>> albedoMap = LoadMaterialTexture(material, aiTextureType_DIFFUSE, "albedoMap", mat);
+        textures.insert(textures.end(), albedoMap.begin(), albedoMap.end());
 
-            std::vector<Ref<Texture>> roughnessMap = LoadMaterialTexture(material, aiTextureType_SHININESS, "roughnessMap", mat);
-            textures.insert(textures.end(),roughnessMap.begin(), roughnessMap.end());
+        std::vector<Ref<Texture>> metallicMap = LoadMaterialTexture(material, aiTextureType_UNKNOWN , "metallicMap", mat );
+        /* if(metallicMap.size() == 0)
+            std::exit(-1); */
+        textures.insert(textures.end(), metallicMap.begin(), metallicMap.end());
 
-            std::vector<Ref<Texture>> normalMap = LoadMaterialTexture(material, aiTextureType_HEIGHT, "normalMap", mat);
-            textures.insert(textures.end(),normalMap.begin(), normalMap.end());
+        std::vector<Ref<Texture>> roughnessMap = LoadMaterialTexture(material, aiTextureType_UNKNOWN, "roughnessMap", mat);
+        textures.insert(textures.end(),roughnessMap.begin(), roughnessMap.end());
 
-            std::vector<Ref<Texture>> AOMap = LoadMaterialTexture(material, aiTextureType_AMBIENT, "AOMap", mat);
-            textures.insert(textures.end(),AOMap.begin(), AOMap.end());
+        //std::vector<Ref<Texture>> normalMap = LoadMaterialTexture(material, aiTextureType_HEIGHT, "normalMap", mat);
+        //textures.insert(textures.end(),normalMap.begin(), normalMap.end());
 
-            mat->SetTextures(textures);
-        }
+        //std::vector<Ref<Texture>> AOMap = LoadMaterialTexture(material, aiTextureType_AMBIENT, "AOMap", mat);
+        //textures.insert(textures.end(),AOMap.begin(), AOMap.end());
+
+        mat->SetTextures(textures);
 
         return mat;
     }
@@ -128,7 +130,6 @@ namespace Gecko
     {
         bool skip = false;
         std::vector<Ref<Texture>> textures;
-        
 
         for (unsigned int i = 0; i < mat->GetTextureCount(type); i++)
         {

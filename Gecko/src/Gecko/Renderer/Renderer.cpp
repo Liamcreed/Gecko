@@ -78,6 +78,7 @@ namespace Gecko
 
         material->Bind(s_Data.shader);
         mesh->Bind();
+        material->UnBind();
     }
     
 

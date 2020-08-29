@@ -14,6 +14,14 @@ namespace Gecko
             glBindTexture(GL_TEXTURE_2D, m_Textures[i]->GetRendererID());
         }
     }
+    void Material::UnBind()
+    {
+        for (int i = 0; i < m_Textures.size(); i++)
+        {
+            m_Textures[i]->UnBind();
+        }
+        
+    }
     void Material::SetTextures(std::vector<Ref<Texture>> textures)
     {
         m_Textures = textures;

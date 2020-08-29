@@ -20,6 +20,7 @@ namespace Gecko
         ~Material();
 
         void Bind(Ref<Shader>& shader);
+        void UnBind();
         void SetTextures(std::vector<Ref<Texture>> textures);
         void SetValue(std::string& name, float value);
         void SetShader(Ref<Shader> shader){m_Shader = shader; }

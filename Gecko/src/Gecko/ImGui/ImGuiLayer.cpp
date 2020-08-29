@@ -21,11 +21,12 @@ namespace Gecko
 		ImGuiStyle &style = ImGui::GetStyle();
 		style.ScaleAllSizes(1.1);
 
-		ApplyBlueTheme();
+		//ApplyBlueTheme();
 		//ApplyDarkTheme();
 		
 		//ApplyDefaultStyle();
-
+		ApplyDarkTheme();
+		
 		if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 		{
 			style.WindowRounding = 0.0f;

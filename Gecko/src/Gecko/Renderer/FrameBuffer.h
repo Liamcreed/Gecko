@@ -2,28 +2,6 @@
 #include <glad/glad.h>
 #include <assert.h>
 #include <glm/glm.hpp>
-#define GK_ASSERT(e) \
-    if (!(e))        \
-        exit(-1);
-#define GLCall(x)   \
-    GLClearError(); \
-    x;              \
-    GK_ASSERT(GLLogCall(#x, __FILE__, __LINE__))
-
-static void GLClearError()
-{
-    while (glGetError() != GL_NO_ERROR)
-        ;
-}
-static bool GLLogCall(const char *function, const char *file, int line)
-{
-    while (GLenum error = glGetError())
-    {
-        GK_LOG(BOLDRED "[OPENGL ERROR] " RESET) << error << " " << file << " " << function << " " << line << std::endl;
-        return false;
-    }
-    return true;
-}
 
 namespace Gecko
 {

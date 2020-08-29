@@ -40,16 +40,23 @@ Ref<Model> caveTrollModel; //FIXME:
 void EditorLayer::OnAttach()
 {
     caveTrollModel = CreateRef<Model>();
-    caveTrollModel->LoadFromFile("assets/models/Cavetroll/Cavetroll.fbx");
+    caveTrollModel->LoadFromFile("assets/models/jedi-star-fighter/jedi-spaceship.fbx");
 
     m_PlayerEntity = m_ActiveScene->CreateEntity("Player");
     m_PlayerEntity.AddComponent<MeshRendererComponent>(caveTrollModel->meshes[0],caveTrollModel->materials[0] );
     m_PlayerEntity.AddComponent<ScriptComponent>().Bind<PlayerMovement>();
 
+    if (caveTrollModel->meshes.size() > 0)
+    {
+        Entity secondentity= m_ActiveScene->CreateEntity("Player");
+        secondentity.AddComponent<MeshRendererComponent>(caveTrollModel->meshes[1],caveTrollModel->materials[1] );
+        secondentity.AddComponent<ScriptComponent>().Bind<PlayerMovement>();
+    }
+    
     m_MainCameraEntity = m_ActiveScene->CreateEntity("Camera Entity");
     m_MainCameraEntity.AddComponent<CameraComponent>();
     m_MainCameraEntity.AddComponent<ScriptComponent>().Bind<CameraController>();
-
+    
     m_SecondCameraEntity = m_ActiveScene->CreateEntity("Second Camera Entity");
     auto &cc = m_SecondCameraEntity.AddComponent<CameraComponent>();
     cc.Primary = false;
@@ -181,8 +188,10 @@ void EditorLayer::OnImGuiRender()
                 m_PlayerEntity.GetComponent<MeshRendererComponent>().mesh = caveTrollModel->meshes[0];
             }
         }
-        ImGui::DragFloat3("player Transform",
+        ImGui::DragFloat3("player Position",
                           &m_PlayerEntity.GetComponent<TransformComponent>().Position.x, 0.01f);
+        ImGui::DragFloat3("player Rotation",
+                          &m_PlayerEntity.GetComponent<TransformComponent>().Rotation.x, 0.1f);
         if (ImGui::TreeNode("Model textures"))
         {
             for (int i = 0; i < m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures().size(); i++)
