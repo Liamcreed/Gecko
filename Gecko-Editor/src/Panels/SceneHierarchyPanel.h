@@ -2,6 +2,7 @@
 #include "Gecko/Scene/Scene.h"
 #include "Gecko/Core/Core.h"
 #include "Gecko/Scene/Entity.h"
+
 namespace Gecko
 {
     class SceneHierarchyPanel

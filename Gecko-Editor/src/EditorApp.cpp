@@ -3,21 +3,23 @@
 
 #include "Layer.h"
 
-class GeckoEditor : public Gecko::Application
+namespace Gecko
 {
-public:
-    GeckoEditor()
-        :Application("Gecko Editor")
+    class GeckoEditor : public Gecko::Application
     {
-        PushLayer(new EditorLayer());
-    }
-    ~GeckoEditor()
+    public:
+        GeckoEditor()
+            : Application("Gecko Editor")
+        {
+            PushLayer(new EditorLayer());
+        }
+        ~GeckoEditor()
+        {
+        }
+    };
+    Gecko::Application *Gecko::CreateApplication()
     {
-    
+        return new GeckoEditor();
     }
-};
-Gecko::Application* Gecko::CreateApplication()
-{
-    return new GeckoEditor();
-}
 
+} // namespace Gecko

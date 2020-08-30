@@ -2,27 +2,29 @@
 #include "Gecko.h"
 #include "Panels/SceneHierarchyPanel.h"
 
-class EditorLayer : public Gecko::Layer
+namespace Gecko
 {
-private:
-    PerspectiveCameraController m_CamController{1280, 720};
-    FrameBuffer m_Framebuffer{1440, 900};
 
-    Ref<Scene> m_ActiveScene =  CreateRef<Scene>();
-    Entity m_PlayerEntity;
-    Entity m_MainCameraEntity;
-    Entity m_SecondCameraEntity;
+    class EditorLayer : public Gecko::Layer
+    {
+    private:
+        FrameBuffer m_Framebuffer{1440, 900};
 
-    bool m_PrimaryCamera  = true;
-    bool m_ViewFocused;
+        Ref<Scene> m_ActiveScene = CreateRef<Scene>();
+        Entity m_PlayerEntity;
+        Entity m_MainCameraEntity;
 
-    //Panels
-    SceneHierarchyPanel m_SceneHierarchyPanel;
-public:
-    EditorLayer(){}
-    void OnAttach() override;
+        bool m_ViewFocused;
 
-    void OnUpdate(DeltaTime dt) override;
-    void OnImGuiRender() override;
-    void OnDetach() override;
-};
+        //Panels
+        SceneHierarchyPanel m_SceneHierarchyPanel;
+        
+    public:
+        EditorLayer() {}
+        void OnAttach() override;
+
+        void OnUpdate(DeltaTime dt) override;
+        void OnImGuiRender() override;
+        void OnDetach() override;
+    };
+} // namespace Gecko

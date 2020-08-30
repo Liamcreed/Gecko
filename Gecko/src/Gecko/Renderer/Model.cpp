@@ -9,6 +9,7 @@ namespace Gecko
         //Clear meshes before loading new model
         meshes.clear();
         meshes.clear();
+    
 
         materials.clear();
 
@@ -20,7 +21,7 @@ namespace Gecko
             GK_LOG(BOLDRED "[MODEL LOADING ERROR]" RESET) << importer.GetErrorString() << std::endl;
             return;
         }
-
+        
         directory = path.substr(0, path.find_last_of('/'));
 
         ProcessNode(scene->mRootNode, scene);
@@ -95,7 +96,7 @@ namespace Gecko
             {
                 vertex.texCoord = glm::vec2(0.0f, 0.0f);
             }
-
+        
             vertices.push_back(vertex);
         }
         for (uint32_t i = 0; i < mesh->mNumFaces; i++)
@@ -119,11 +120,9 @@ namespace Gecko
         aiString str;
         mat->GetTexture(type, 0, &str);
 
-        std::cout << str.C_Str() << std::endl;
-
         for (uint32_t j = 0; j < material->GetTextures().size(); j++)
         {
-            if (material->GetTextures()[j]->GetPath() == str.C_Str())
+            if (material->GetTextures()[j]->GetPath() == directory + '/' + str.C_Str())
             {
                 return material->GetTextures()[j];
             }

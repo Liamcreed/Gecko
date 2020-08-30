@@ -19,6 +19,7 @@ namespace Gecko
 
         m_Window = new Window(title, 1440, 840);
 
+        m_Window->SetTitle(title + "   |    OpenGL " + (const char*)glGetString( GL_VERSION ));
         m_ImGuiLayer = new ImGuiLayer();
         PushOverlay(m_ImGuiLayer);
 
