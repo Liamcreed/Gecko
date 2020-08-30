@@ -1,14 +1,10 @@
 #include "gkpch.h"
 #include "ImGuiLayer.h"
-#include "Themes.h"
 
 #include "Gecko/Core/Application.h"
 
 namespace Gecko
 {
-	
-	ImGuiLayer::ImGuiLayer() {}
-
 	void ImGuiLayer::OnAttach()
 	{
 		IMGUI_CHECKVERSION();
@@ -21,11 +17,11 @@ namespace Gecko
 		ImGuiStyle &style = ImGui::GetStyle();
 		style.ScaleAllSizes(1.1);
 
+		//THEMES:
 		//ApplyBlueTheme();
 		//ApplyDarkTheme();
-		
-		ApplyDefaultStyle();
 		//ApplyDarkTheme();
+		ApplyDefaultStyle();
 		
 		if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 		{

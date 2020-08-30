@@ -51,7 +51,7 @@ namespace Gecko
             return true;
         return false;
     }
-    /* Only returns true when key is pressed once!*/
+    /* Only returns true when mouse is pressed once!*/
     bool Input::MouseButtonPress(int button)
     {
         static bool pressed = false;

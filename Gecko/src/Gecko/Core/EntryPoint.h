@@ -3,7 +3,6 @@
 
 int main(int argc, char const *argv[])
 {
-    
     auto application = Gecko::CreateApplication();
     
     try

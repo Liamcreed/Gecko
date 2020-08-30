@@ -8,9 +8,6 @@ namespace Gecko
     {
         //Clear meshes before loading new model
         meshes.clear();
-        meshes.clear();
-    
-
         materials.clear();
 
         Assimp::Importer importer;
@@ -21,7 +18,7 @@ namespace Gecko
             GK_LOG(BOLDRED "[MODEL LOADING ERROR]" RESET) << importer.GetErrorString() << std::endl;
             return;
         }
-        
+
         directory = path.substr(0, path.find_last_of('/'));
 
         ProcessNode(scene->mRootNode, scene);
@@ -35,7 +32,7 @@ namespace Gecko
             meshes.push_back(ProcessMesh(mesh, scene));
             materials.push_back(ProcessMaterial(mesh, scene));
         }
-
+        
         for (uint32_t i = 0; i < node->mNumChildren; i++)
         {
             ProcessNode(node->mChildren[i], scene);
@@ -50,7 +47,19 @@ namespace Gecko
 
         Ref<Texture> albedoMap = LoadMaterialTexture(material, aiTextureType_DIFFUSE, mat);
         mat->SetAlbedoMap(albedoMap);
-        
+
+        aiColor4D albedo;
+        if (AI_SUCCESS == aiGetMaterialColor(material, AI_MATKEY_COLOR_DIFFUSE, &albedo))
+            mat->SetAlbedo(glm::vec3(albedo.r, albedo.g, albedo.b));
+
+        float roughness;
+        if (AI_SUCCESS == aiGetMaterialFloat(material, AI_MATKEY_SHININESS, &roughness))
+            mat->SetRoughness(roughness);
+
+        float metallic;
+        if (AI_SUCCESS == aiGetMaterialFloat(material, AI_MATKEY_COLOR_REFLECTIVE, &metallic))
+            mat->SetMetallic(metallic);
+
         return mat;
     }
     Ref<Mesh> Model::ProcessMesh(aiMesh *mesh, const aiScene *scene)
@@ -96,7 +105,7 @@ namespace Gecko
             {
                 vertex.texCoord = glm::vec2(0.0f, 0.0f);
             }
-        
+
             vertices.push_back(vertex);
         }
         for (uint32_t i = 0; i < mesh->mNumFaces; i++)
@@ -115,29 +124,27 @@ namespace Gecko
     Ref<Texture> Model::LoadMaterialTexture(aiMaterial *mat, aiTextureType type, Ref<Material> &material)
     {
         bool skip = false;
-        Ref<Texture> texture;
+        Ref<Texture> texture = CreateRef<Texture>();
 
-        aiString str;
-        mat->GetTexture(type, 0, &str);
-
-        for (uint32_t j = 0; j < material->GetTextures().size(); j++)
+        for (unsigned int i = 0; i < mat->GetTextureCount(type); i++)
         {
-            if (material->GetTextures()[j]->GetPath() == directory + '/' + str.C_Str())
+            aiString str;
+            mat->GetTexture(type, 0, &str);
+
+            for (uint32_t j = 0; j < material->GetTextures().size(); j++)
             {
-                return material->GetTextures()[j];
+                if (material->GetTextures()[j]->GetPath() == directory + '/' + str.C_Str())
+                {
+                    return material->GetTextures()[j];
+                }
             }
-        }
 
-        std::string filePath = directory + '/' + str.C_Str();
-        if (filePath != directory)
-        {
-            texture = CreateRef<Texture>();
-            texture->LoadFromFile(filePath);
-            texture->GetPath() = str.C_Str();
-        }
-        else
-        {
-            texture = CreateRef<Texture>();
+            std::string filePath = directory + '/' + str.C_Str();
+            if (filePath != directory)
+            {
+                texture->LoadFromFile(filePath);
+                texture->GetPath() = str.C_Str();
+            }
         }
 
         return texture;

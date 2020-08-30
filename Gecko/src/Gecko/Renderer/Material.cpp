@@ -36,7 +36,6 @@ namespace Gecko
         
     
         m_Shader->SetVec3("material.albedo", m_Albedo.x, m_Albedo.y, m_Albedo.z);
-        m_Shader->SetFloat("material.AO", m_AO);
         m_Shader->SetFloat("material.metallic", m_Metallic);
         m_Shader->SetFloat("material.roughness", m_Roughness);
     }
@@ -47,15 +46,5 @@ namespace Gecko
         m_RoughnessMap->UnBind();
         m_NormalMap->UnBind();
         m_AOMap->UnBind();
-    }
-    
-    void Material::SetValue(std::string &name, float value)
-    {
-        if (name == "AO")
-            m_AO = value;
-        if (name == "metallic")
-            m_Metallic = value;
-        if (name == "roughness")
-            m_Metallic = value;
     }
 } // namespace Gecko

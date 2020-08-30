@@ -2,6 +2,7 @@
 #include "Gecko/Scene/Scene.h"
 #include "Gecko/Core/Core.h"
 #include "Gecko/Scene/Entity.h"
+#include "Gecko/Renderer/Texture.h"
 
 namespace Gecko
 {
@@ -9,6 +10,9 @@ namespace Gecko
     {
     private:
         Ref<Scene> m_Context;
+        Entity m_SelectionContext;
+
+        Ref<Texture> m_CubeTexture = CreateRef<Texture>();
     public:
         SceneHierarchyPanel(const Ref<Scene>& context);
         SceneHierarchyPanel(){}
@@ -17,7 +21,7 @@ namespace Gecko
         void OnImGuiRenderer();
     private:
         void DrawEntityNode(Entity entity);
-        Entity m_SelectionContext;
+    
     };
 
 } // namespace Gecko

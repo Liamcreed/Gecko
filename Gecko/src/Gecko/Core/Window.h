@@ -14,12 +14,11 @@ namespace Gecko
 
     private:
         void Clean();
-
     public:
-        Window(std::string t, int w, int h);
         void Update();
+          
+        Window(std::string t, int w, int h);
         ~Window();
-
     public:
         bool Closed() { return glfwWindowShouldClose(m_GLFWWindow); }
 

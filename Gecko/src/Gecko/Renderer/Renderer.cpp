@@ -74,6 +74,10 @@ namespace Gecko
         transform = glm::rotate(transform, glm::radians(rotation.y), glm::vec3(0, 1, 0));
         transform = glm::rotate(transform, glm::radians(rotation.z), glm::vec3(0, 0, 1));
 
+        DrawMesh(mesh,material,transform);
+    }
+    void Renderer::DrawMesh(Ref<Mesh>& mesh,Ref<Material>& material, const glm::mat4& transform)
+    {
         s_Data.shader->SetMat4("model", transform);
 
         material->Bind(s_Data.shader);

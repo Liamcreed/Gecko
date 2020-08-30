@@ -7,11 +7,10 @@
 
 namespace Gecko
 {
-
 	class ImGuiLayer : public Layer
 	{
 	public:
-		ImGuiLayer();
+		ImGuiLayer(){}
 		~ImGuiLayer() = default;
 
 		virtual void OnAttach() override;

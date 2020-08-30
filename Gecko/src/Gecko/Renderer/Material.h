@@ -12,7 +12,7 @@ namespace Gecko
         glm::vec3 m_Albedo = glm::vec3(1.0f,1.0f,1.0f);
         float m_Metallic = 1.0f;
         float m_Roughness = 1.0f;
-        float m_AO = 1.0f;
+
         
 
         Ref<Texture> m_AlbedoMap = CreateRef<Texture>();
@@ -34,8 +34,12 @@ namespace Gecko
         void SetAOMap(Ref<Texture>& texture) { m_AOMap = texture; }
         void SetNormalMap(Ref<Texture>& texture) { m_NormalMap = texture; }
 
-        void SetValue(std::string& name, float value);
+        
+
         void SetAlbedo(glm::vec3 color){m_Albedo = color;}
+        void SetRoughness(float value){m_Roughness = value; }
+        void SetMetallic(float value){m_Metallic = value; }
+        
         void SetShader(Ref<Shader> shader){m_Shader = shader; }
 
         Ref<Texture> &GetAlbedoMap() {return m_AlbedoMap; }
@@ -43,6 +47,11 @@ namespace Gecko
         Ref<Texture> &GetRoughnessMap() {return m_RoughnessMap; }
         Ref<Texture> &GetNormalMap() {return m_NormalMap; }
         Ref<Texture> &GetAOMap() {return m_AOMap; }
+
+        glm::vec3 &GetAlbedo() {return m_Albedo; }
+        float &GetMetallic() {return  m_Metallic;}
+        float &GetRoughness() {return m_Roughness; }
+        
 
         std::vector<Ref<Texture>> GetTextures(){return std::vector<Ref<Texture>> 
         {

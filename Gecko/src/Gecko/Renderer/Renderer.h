@@ -26,6 +26,7 @@ namespace Gecko
         //TODO: optimize renderer
         
         static void DrawMesh(Ref<Mesh>& mesh,Ref<Material>& material, const glm::vec3 &position, const glm::vec3 &scale, const glm::vec3 &rotation );
+        static void DrawMesh(Ref<Mesh>& mesh,Ref<Material>& material, const glm::mat4& transform);
     };
 
 } // namespace Gecko

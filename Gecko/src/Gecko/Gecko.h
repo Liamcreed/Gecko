@@ -6,7 +6,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "imgui.h"
-#include "Gecko/ImGui/ImGuiFilebrowser.h"
+#include "Gecko/ImGui/ImGuiLayer.h"
 
 #include "Gecko/Core/KeyCodes.h"
 #include "Gecko/Core/Window.h"
@@ -29,5 +29,5 @@
 #include "Gecko/Scene/Components.h"
 
 #ifdef GK_INCLUDE_ENTRYPOINT
-#include "Gecko/Core/Entrypoint.h"
+#include "Gecko/Core/EntryPoint.h"
 #endif

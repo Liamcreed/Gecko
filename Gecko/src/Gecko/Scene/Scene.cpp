@@ -10,7 +10,7 @@
 
 namespace Gecko
 {
-    
+
     Scene::Scene()
     {
         shader = CreateRef<Shader>("assets/shaders/default.vert", "assets/shaders/default.frag");
@@ -23,7 +23,6 @@ namespace Gecko
         entity.AddComponent<TagComponent>(name);
         return entity;
     }
-    
 
     void Scene::OnUpdate(DeltaTime dt)
     {
@@ -48,22 +47,21 @@ namespace Gecko
             auto view = m_Registry.view<TransformComponent, CameraComponent>();
             for (auto entity : view)
             {
-                auto [transform, camera] = view.get<TransformComponent, CameraComponent>(entity);
+                auto [transformComponent, camera] = view.get<TransformComponent, CameraComponent>(entity);
 
                 if (camera.Primary)
                 {
                     mainCamera = &camera.camera;
-                    cameraTransform = &transform.Transform;
+
+                    glm::mat4 transform = glm::mat4(1.0f);
+                    transform = glm::translate(transformComponent.Transform, transformComponent.Position);
+                    transform = glm::rotate(transform, glm::radians(transformComponent.Rotation.x), glm::vec3(1, 0, 0));
+                    transform = glm::rotate(transform, glm::radians(transformComponent.Rotation.y), glm::vec3(0, 1, 0));
+                    transform = glm::rotate(transform, glm::radians(transformComponent.Rotation.z), glm::vec3(0, 0, 1));
+
+                    cameraTransform = &transform;
                     break;
                 }
-            }
-        }
-        {
-            //Lights
-            auto view = m_Registry.view<TransformComponent, LightComponent>();
-            for (auto entity : view)
-            {
-                auto [transform, light] = view.get<TransformComponent, LightComponent>(entity);
             }
         }
 
@@ -76,7 +74,7 @@ namespace Gecko
                 auto group = m_Registry.group<TransformComponent>(entt::get<MeshRendererComponent>);
                 for (auto entity : group)
                 {
-                    auto [transform, meshRenderer] = group.get<TransformComponent, MeshRendererComponent>(entity); 
+                    auto [transform, meshRenderer] = group.get<TransformComponent, MeshRendererComponent>(entity);
                     Renderer::DrawMesh(meshRenderer.mesh, meshRenderer.material, transform.Position, transform.Size, transform.Rotation);
                 }
             }

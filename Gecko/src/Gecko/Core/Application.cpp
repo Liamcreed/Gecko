@@ -1,13 +1,5 @@
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-
 #include "gkpch.h"
-
-#include "Input.h"
 #include "Application.h"
-#include "KeyCodes.h"
-
 
 namespace Gecko
 {
@@ -17,9 +9,9 @@ namespace Gecko
     {
         s_Instance = this;
 
-        m_Window = new Window(title, 1440, 840);
-
+        m_Window = new Window(title, 1280, 720);
         m_Window->SetTitle(title + "   |    OpenGL " + (const char*)glGetString( GL_VERSION ));
+
         m_ImGuiLayer = new ImGuiLayer();
         PushOverlay(m_ImGuiLayer);
 
@@ -42,8 +34,8 @@ namespace Gecko
             for (Layer *layer : m_LayerStack)
                 layer->OnUpdate(deltaTime);
 
-            glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-            glClear(GL_COLOR_BUFFER_BIT);
+            /* glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+            glClear(GL_COLOR_BUFFER_BIT); */
 
             m_ImGuiLayer->Begin();
             for (Layer *layer : m_LayerStack)
