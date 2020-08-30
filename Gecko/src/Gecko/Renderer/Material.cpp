@@ -7,27 +7,55 @@ namespace Gecko
     }
     void Material::Bind(Ref<Shader> &shader)
     {
-        for (int i = 0; i < m_Textures.size(); i++)
-        {
-            glActiveTexture(GL_TEXTURE0 + i);
-            shader->SetInt("material." + m_Textures[i]->GetType(), i);
-            glBindTexture(GL_TEXTURE_2D, m_Textures[i]->GetRendererID());
-        }
+        m_Shader = shader;
+
+        //Albedo map
+        glActiveTexture(GL_TEXTURE0);
+        m_Shader->SetInt("material.albedoMap", 0);
+        glBindTexture(GL_TEXTURE_2D, m_AlbedoMap->GetRendererID());
+
+        //Metallic map
+        glActiveTexture(GL_TEXTURE1);
+        m_Shader->SetInt("material.metallicMap", 1);
+        glBindTexture(GL_TEXTURE_2D, m_MetallicMap->GetRendererID());
+        
+        //Roughness Map map
+        glActiveTexture(GL_TEXTURE2);
+        m_Shader->SetInt("material.roughnessMap", 2);
+        glBindTexture(GL_TEXTURE_2D, m_RoughnessMap->GetRendererID());
+
+        //Normal map
+        glActiveTexture(GL_TEXTURE3);
+        m_Shader->SetInt("material.normalMap", 3);
+        glBindTexture(GL_TEXTURE_2D, m_NormalMap->GetRendererID());
+
+        //AO map
+        glActiveTexture(GL_TEXTURE4);
+        m_Shader->SetInt("material.AOMap", 4);
+        glBindTexture(GL_TEXTURE_2D, m_AOMap->GetRendererID());
+        
+    
+        m_Shader->SetVec3("material.albedo", m_Albedo.x, m_Albedo.y, m_Albedo.z);
+        m_Shader->SetFloat("material.AO", m_AO);
+        m_Shader->SetFloat("material.metallic", m_Metallic);
+        m_Shader->SetFloat("material.roughness", m_Roughness);
     }
     void Material::UnBind()
     {
-        for (int i = 0; i < m_Textures.size(); i++)
-        {
-            m_Textures[i]->UnBind();
-        }
-        
+        m_AlbedoMap->UnBind();
+        m_MetallicMap->UnBind();
+        m_RoughnessMap->UnBind();
+        m_NormalMap->UnBind();
+        m_AOMap->UnBind();
     }
-    void Material::SetTextures(std::vector<Ref<Texture>> textures)
-    {
-        m_Textures = textures;
-    }
+    
     void Material::SetValue(std::string &name, float value)
     {
-        m_Shader->SetFloat("material." + name, value);
+        if (name == "AO")
+            m_AO = value;
+        if (name == "metallic")
+            m_Metallic = value;
+        if (name == "roughness")
+            m_Metallic = value;
     }
 } // namespace Gecko

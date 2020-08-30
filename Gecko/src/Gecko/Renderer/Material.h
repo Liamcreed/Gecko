@@ -2,27 +2,55 @@
 #include "Shader.h"
 #include "Texture.h"
 #include "gkpch.h"
+#include <glm/glm.hpp>
 namespace Gecko
 {
     class Material
     {
     private:
         Ref<Shader> m_Shader;
-        float m_Albedo;
-        float m_Metallic;
-        float m_Roughness;
-        float m_AO;
-        std::vector<Ref<Texture>> m_Textures;
-    public:
-        //FIXME:  std::vector<Ref<Texture>> instead of this 
-        std::vector<Ref<Texture>> &GetTextures(){return m_Textures; }
+        glm::vec3 m_Albedo = glm::vec3(1.0f,1.0f,1.0f);
+        float m_Metallic = 1.0f;
+        float m_Roughness = 1.0f;
+        float m_AO = 1.0f;
         
+
+        Ref<Texture> m_AlbedoMap = CreateRef<Texture>();
+        Ref<Texture> m_MetallicMap = CreateRef<Texture>();
+        Ref<Texture> m_RoughnessMap = CreateRef<Texture>();
+        Ref<Texture> m_NormalMap = CreateRef<Texture>();
+        Ref<Texture> m_AOMap = CreateRef<Texture>();
+
+    public:
+        Material(){}
         ~Material();
 
         void Bind(Ref<Shader>& shader);
         void UnBind();
-        void SetTextures(std::vector<Ref<Texture>> textures);
+        
+        void SetAlbedoMap(Ref<Texture>& texture) { m_AlbedoMap = texture; }
+        void SetMetallicMap(Ref<Texture>& texture) { m_MetallicMap = texture; }
+        void SetRoughnessMap(Ref<Texture>& texture) { m_RoughnessMap = texture; }
+        void SetAOMap(Ref<Texture>& texture) { m_AOMap = texture; }
+        void SetNormalMap(Ref<Texture>& texture) { m_NormalMap = texture; }
+
         void SetValue(std::string& name, float value);
+        void SetAlbedo(glm::vec3 color){m_Albedo = color;}
         void SetShader(Ref<Shader> shader){m_Shader = shader; }
+
+        Ref<Texture> &GetAlbedoMap() {return m_AlbedoMap; }
+        Ref<Texture> &GetMetallicMap() {return  m_MetallicMap;}
+        Ref<Texture> &GetRoughnessMap() {return m_RoughnessMap; }
+        Ref<Texture> &GetNormalMap() {return m_NormalMap; }
+        Ref<Texture> &GetAOMap() {return m_AOMap; }
+
+        std::vector<Ref<Texture>> GetTextures(){return std::vector<Ref<Texture>> 
+        {
+            m_AlbedoMap,
+            m_MetallicMap,
+            m_RoughnessMap,
+            m_NormalMap,
+            m_AOMap
+        };}
     };    
 } // namespace Gecko

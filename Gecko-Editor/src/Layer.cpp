@@ -3,6 +3,8 @@
 #include <nfd.h>
 #include "Panels/SceneHierarchyPanel.h"
 
+using namespace Gecko;
+
 //------------Scripts-------------//
 class PlayerMovement : public EntityBehaviour
 {
@@ -35,28 +37,26 @@ public:
 };
 //--------------------------------//
 
-Ref<Model> caveTrollModel; //FIXME:
+Ref<Model> model; //FIXME:
 
 void EditorLayer::OnAttach()
 {
-    caveTrollModel = CreateRef<Model>();
-    caveTrollModel->LoadFromFile("assets/models/jedi-star-fighter/jedi-spaceship.fbx");
+    //Load model
+    model = CreateRef<Model>();
+    model->LoadFromFile("assets/models/Roboteye/untitled.fbx");
+
+    //Creating material
+    //FIXME:
+    Ref<Material> mat = model->materials[0];
 
     m_PlayerEntity = m_ActiveScene->CreateEntity("Player");
-    m_PlayerEntity.AddComponent<MeshRendererComponent>(caveTrollModel->meshes[0],caveTrollModel->materials[0] );
+    m_PlayerEntity.AddComponent<MeshRendererComponent>(model->meshes[0], mat); //FIXME:
     m_PlayerEntity.AddComponent<ScriptComponent>().Bind<PlayerMovement>();
 
-    if (caveTrollModel->meshes.size() > 0)
-    {
-        Entity secondentity= m_ActiveScene->CreateEntity("Player");
-        secondentity.AddComponent<MeshRendererComponent>(caveTrollModel->meshes[1],caveTrollModel->materials[1] );
-        secondentity.AddComponent<ScriptComponent>().Bind<PlayerMovement>();
-    }
-    
     m_MainCameraEntity = m_ActiveScene->CreateEntity("Camera Entity");
     m_MainCameraEntity.AddComponent<CameraComponent>();
     m_MainCameraEntity.AddComponent<ScriptComponent>().Bind<CameraController>();
-    
+
     m_SecondCameraEntity = m_ActiveScene->CreateEntity("Second Camera Entity");
     auto &cc = m_SecondCameraEntity.AddComponent<CameraComponent>();
     cc.Primary = false;
@@ -123,6 +123,7 @@ void EditorLayer::OnImGuiRender()
         }
         ImGui::EndMenuBar();
     }
+    
 
     //----Performance----//
     ImGui::Begin("Performance");
@@ -169,6 +170,7 @@ void EditorLayer::OnImGuiRender()
     ImGui::Separator();
 
     //---------------------------//
+    //FIXME: this is all temporary
     if (m_PlayerEntity)
     {
         ImGui::Separator();
@@ -179,33 +181,46 @@ void EditorLayer::OnImGuiRender()
         if (ImGui::Button("..."))
         {
             nfdchar_t *outPath = NULL;
-            nfdresult_t result = NFD_OpenDialog("fbx", NULL, &outPath);
+            nfdresult_t result = NFD_OpenDialog("fbx,obj", NULL, &outPath);
 
             if (result == NFD_OKAY)
             {
-                caveTrollModel->LoadFromFile(outPath);
-                m_PlayerEntity.GetComponent<MeshRendererComponent>().material = caveTrollModel->materials[0];
-                m_PlayerEntity.GetComponent<MeshRendererComponent>().mesh = caveTrollModel->meshes[0];
+                model->LoadFromFile(outPath);
+                m_PlayerEntity.GetComponent<MeshRendererComponent>().material = model->materials[0];
+                m_PlayerEntity.GetComponent<MeshRendererComponent>().mesh = model->meshes[0];
             }
         }
         ImGui::DragFloat3("player Position",
                           &m_PlayerEntity.GetComponent<TransformComponent>().Position.x, 0.01f);
         ImGui::DragFloat3("player Rotation",
                           &m_PlayerEntity.GetComponent<TransformComponent>().Rotation.x, 0.1f);
-        if (ImGui::TreeNode("Model textures"))
+        ImGui::DragFloat3("player Scale",
+                          &m_PlayerEntity.GetComponent<TransformComponent>().Size.x, 0.01f);
+
+        static Ref<Material> mat = CreateRef<Material>();
+
+        if(ImGui::ImageButton((void *)m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetAlbedoMap()->GetTextureData() , ImVec2(50, 50)))
         {
-            for (int i = 0; i < m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures().size(); i++)
-            {
-                std::string name = m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures()[i]->GetType() + " " + m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures()[i]->GetPath();
-                if (ImGui::TreeNode(name.c_str()))
-                {
-                    ImGui::Image((void *)m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetTextures()[i]->GetTextureData(),
-                                 ImVec2(200, 200));
-                    ImGui::TreePop();
-                }
-            }
-            ImGui::TreePop();
-        }
+            nfdchar_t *outPath = NULL;
+            nfdresult_t result = NFD_OpenDialog("fbx,obj", NULL, &outPath);
+            
+            if (result == NFD_OKAY){Ref<Texture> tex = CreateRef<Texture>(); tex->LoadFromFile(outPath); mat->SetAlbedoMap(tex); m_PlayerEntity.GetComponent<MeshRendererComponent>().material = model->materials[0];}
+            
+        } 
+        ImGui::SameLine(); ImGui::Text("Albedo");
+        
+        ImGui::ImageButton((void *)m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetMetallicMap()->GetTextureData() , ImVec2(50, 50));
+        ImGui::SameLine(); ImGui::Text("Metallic");
+
+        ImGui::ImageButton((void *)m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetRoughnessMap()->GetTextureData() , ImVec2(50, 50));
+        ImGui::SameLine(); ImGui::Text("roughness");
+
+        ImGui::ImageButton((void *)m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetNormalMap()->GetTextureData() , ImVec2(50, 50));
+        ImGui::SameLine(); ImGui::Text("normal");
+
+        ImGui::ImageButton((void *)m_PlayerEntity.GetComponent<MeshRendererComponent>().material->GetAOMap()->GetTextureData() , ImVec2(50, 50));
+        ImGui::SameLine(); ImGui::Text("ao");
+
         ImGui::Separator();
     }
 

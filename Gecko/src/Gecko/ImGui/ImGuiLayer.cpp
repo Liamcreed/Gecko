@@ -24,8 +24,8 @@ namespace Gecko
 		//ApplyBlueTheme();
 		//ApplyDarkTheme();
 		
-		//ApplyDefaultStyle();
-		ApplyDarkTheme();
+		ApplyDefaultStyle();
+		//ApplyDarkTheme();
 		
 		if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 		{

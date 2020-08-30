@@ -31,4 +31,3 @@
 #ifdef GK_INCLUDE_ENTRYPOINT
 #include "Gecko/Core/Entrypoint.h"
 #endif
-using namespace Gecko;

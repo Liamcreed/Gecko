@@ -22,6 +22,8 @@ namespace Gecko
 
         m_Height = 1;
         m_Width = 1;
+
+        m_TextureData = m_RendererID;
     }  
     void Texture::Bind(uint32_t slot)
     {
@@ -31,6 +33,17 @@ namespace Gecko
     void Texture::UnBind()
     {
         glBindTexture(GL_TEXTURE_2D, 0);
+    }
+    void Texture::LoadFromData(void* data, uint32_t size)
+    {
+        uint32_t bpp = m_NrChannels == GL_RGBA ? 4 : 3;
+		if(size != m_Width * m_Height * bpp) 
+        {
+            GK_LOG(GK_ERROR)<<"Data must be entire texture!"<<std::endl;
+        }
+		glTextureSubImage2D(m_RendererID, 0, 0, 0, m_Width, m_Height, m_NrChannels, GL_UNSIGNED_BYTE, data);
+
+        m_TextureData = m_RendererID;
     }
     void Texture::LoadFromFile(std::string const &path)
     {

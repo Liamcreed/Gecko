@@ -13,7 +13,7 @@ namespace Gecko
     
     Scene::Scene()
     {
-        shader = CreateRef<Shader>("assets/shaders/default.vert.shader", "assets/shaders/default.frag.shader");
+        shader = CreateRef<Shader>("assets/shaders/default.vert", "assets/shaders/default.frag");
     }
 
     Entity Scene::CreateEntity(const std::string &name)

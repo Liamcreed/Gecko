@@ -46,25 +46,10 @@ namespace Gecko
         std::vector<Ref<Texture>> textures;
 
         aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
-        std::vector<Ref<Texture>> albedoMap = LoadMaterialTexture(material, aiTextureType_DIFFUSE, "albedoMap", mat);
-        textures.insert(textures.end(), albedoMap.begin(), albedoMap.end());
 
-        std::vector<Ref<Texture>> metallicMap = LoadMaterialTexture(material, aiTextureType_UNKNOWN , "metallicMap", mat );
-        /* if(metallicMap.size() == 0)
-            std::exit(-1); */
-        textures.insert(textures.end(), metallicMap.begin(), metallicMap.end());
-
-        std::vector<Ref<Texture>> roughnessMap = LoadMaterialTexture(material, aiTextureType_UNKNOWN, "roughnessMap", mat);
-        textures.insert(textures.end(),roughnessMap.begin(), roughnessMap.end());
-
-        //std::vector<Ref<Texture>> normalMap = LoadMaterialTexture(material, aiTextureType_HEIGHT, "normalMap", mat);
-        //textures.insert(textures.end(),normalMap.begin(), normalMap.end());
-
-        //std::vector<Ref<Texture>> AOMap = LoadMaterialTexture(material, aiTextureType_AMBIENT, "AOMap", mat);
-        //textures.insert(textures.end(),AOMap.begin(), AOMap.end());
-
-        mat->SetTextures(textures);
-
+        Ref<Texture> albedoMap = LoadMaterialTexture(material, aiTextureType_DIFFUSE, mat);
+        mat->SetAlbedoMap(albedoMap);
+        
         return mat;
     }
     Ref<Mesh> Model::ProcessMesh(aiMesh *mesh, const aiScene *scene)
@@ -126,35 +111,36 @@ namespace Gecko
 
         return aMesh;
     }
-    std::vector<Ref<Texture>> Model::LoadMaterialTexture(aiMaterial *mat, aiTextureType type, std::string typeName, Ref<Material> &material)
+    Ref<Texture> Model::LoadMaterialTexture(aiMaterial *mat, aiTextureType type, Ref<Material> &material)
     {
         bool skip = false;
-        std::vector<Ref<Texture>> textures;
+        Ref<Texture> texture;
 
-        for (unsigned int i = 0; i < mat->GetTextureCount(type); i++)
+        aiString str;
+        mat->GetTexture(type, 0, &str);
+
+        std::cout << str.C_Str() << std::endl;
+
+        for (uint32_t j = 0; j < material->GetTextures().size(); j++)
         {
-            aiString str;
-            mat->GetTexture(type, i, &str);
-
-            for (uint32_t j = 0; j < material->GetTextures().size(); j++)
+            if (material->GetTextures()[j]->GetPath() == str.C_Str())
             {
-                if (material->GetTextures()[j]->GetPath() == str.C_Str())
-                {
-                    textures.push_back(material->GetTextures()[j]);
-                }
-            }
-            if (!skip)
-            {
-                Ref<Texture> texture = CreateRef<Texture>();
-                std::string filePath = directory + '/' + str.C_Str();
-                texture->LoadFromFile(filePath);
-
-                texture->GetType() = typeName;
-                texture->GetPath() = str.C_Str();
-
-                textures.push_back(texture);
+                return material->GetTextures()[j];
             }
         }
-        return textures;
+
+        std::string filePath = directory + '/' + str.C_Str();
+        if (filePath != directory)
+        {
+            texture = CreateRef<Texture>();
+            texture->LoadFromFile(filePath);
+            texture->GetPath() = str.C_Str();
+        }
+        else
+        {
+            texture = CreateRef<Texture>();
+        }
+
+        return texture;
     }
 } // namespace Gecko

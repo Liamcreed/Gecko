@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/Gecko/src",
+                "${workspaceFolder}/Gecko/src/gecko/**",
+                "${workspaceFolder}/Gecko/vendor/assimp/include",
+                "${workspaceFolder}/Gecko/vendor/glm/include",
+                "${workspaceFolder}/Gecko/vendor/stb_image",
+                "${workspaceFolder}/Gecko/vendor/glad/include",
+                "${workspaceFolder}/Gecko/vendor/ImGui/include",
+                "${workspaceFolder}/Gecko/vendor/GLFW/include",
+                "${workspaceFolder}/Gecko/vendor/entt/include",
+                "${workspaceFolder}/Gecko-Editor/src"
+                
+            ],
+            "defines": [],
+            "macFrameworkPath": [],
+            "compilerPath": "/usr/local/bin/g++",
+            "cStandard": "gnu18",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

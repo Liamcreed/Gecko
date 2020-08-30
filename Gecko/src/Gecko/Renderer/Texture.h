@@ -11,13 +11,12 @@ namespace Gecko
         uint32_t m_RendererID;
         int m_Width, m_Height, m_NrChannels;
         std::string m_Path;
-        std::string m_Type;
 
         uint32_t m_TextureData;
     public:
         Texture();
         std::string &GetPath() { return m_Path; }
-        std::string &GetType() { return m_Type; }
+
         uint32_t GetTextureData(){return m_TextureData;}
         uint32_t GetRendererID() const {return m_RendererID;}
         glm::vec2 GetSize(){return glm::vec2(m_Width, m_Height);}
@@ -25,6 +24,7 @@ namespace Gecko
         void Bind(uint32_t slot = 0);
         void UnBind();
         void LoadFromFile(std::string const &path);
+        void LoadFromData(void* data, uint32_t size);
         ~Texture();
     };
 
